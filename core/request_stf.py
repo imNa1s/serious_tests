@@ -13,7 +13,7 @@ class Request_stuff(BaseMt):
 
 
 class Request_methods:
-    def sub_on_request(self):
+    def sub_on_request_url(self):
         head_link = f'{LinksReqNotify.notify_test}'
         params = {
             'sum': '30',
@@ -27,7 +27,7 @@ class Request_methods:
         valid_link = f'{head_link}{urlencode(params)}'
         return valid_link
 
-    def sub_off_request(self):
+    def sub_off_request_url(self):
         head_link = f'{LinksReqNotify.notify_test}'
         params = {
             'sum': '30',
@@ -41,7 +41,7 @@ class Request_methods:
         valid_link = f'{head_link}{urlencode(params)}'
         return valid_link
 
-    def sub_rebill_request(self):
+    def sub_rebill_request_url(self):
         head_link = f'{LinksReqNotify.notify_test}'
         params = {
             'sum': '30',
