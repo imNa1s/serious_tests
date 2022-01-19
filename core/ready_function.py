@@ -31,6 +31,7 @@ def transition(browser, link):
     Page.ref()
     stats = Page.save_stats()
     stats_pars2 = Page.transition_take(stats)
+    print(f'transition before request {stats_pars1}, after request {stats_pars2}')
     assert stats_pars1 != stats_pars2, "they equal"
 
 
