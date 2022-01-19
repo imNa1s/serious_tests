@@ -6,7 +6,7 @@ from core.core_mt import BaseMt
 from core.links import SiteLinks, LinksReqTds
 from core.login_page import LoginPage
 from core.request_stf import Request_stuff, Request_urls
-from core.statistc_page import StatsMt
+from core.statistc_base import StatsMt
 
 
 def login_pass(browser, link):
