@@ -24,11 +24,13 @@ def login_pass(browser, link):
 def transition(browser, link):
     Page = StatsMt(browser, link)
     Page.go_to_statistic()
-    stats_pars1 = Page.save_stats()
+    stats = Page.save_stats()
+    stats_pars1 = Page.transition_take(stats)
     sub_on()
     time.sleep(20)
     Page.ref()
-    stats_pars2 = Page.save_stats()
+    stats = Page.save_stats()
+    stats_pars2 = Page.transition_take(stats)
     assert stats_pars1 != stats_pars2, "they equal"
 
 
