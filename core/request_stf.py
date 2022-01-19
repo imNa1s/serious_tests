@@ -12,7 +12,7 @@ class Request_stuff(BaseMt):
         return click_id
 
 
-class Request_methods:
+class Request_urls:
     def sub_on_request_url(self):
         head_link = f'{LinksReqNotify.notify_test}'
         params = {
