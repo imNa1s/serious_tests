@@ -13,6 +13,9 @@ class StatsMt(BaseMt, StatsLocators):
     def save_stats(self):
         page_txt = self.browser.page_source
         soup = BeautifulSoup(page_txt, 'html.parser')
+        return soup
+
+    def transition_take(self, soup):
         table = soup.find_all('tr')[2]
         table = table.find_all('td')[1]
         table = table.get_text()
