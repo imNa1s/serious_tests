@@ -19,4 +19,81 @@ class StatsMt(BaseMt, StatsLocators):
         table = soup.find_all('tr')[2]
         table = table.find_all('td')[1]
         table = table.get_text()
-        return table, print(table)
+        return table
+
+    def unic_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[2]
+        table = table.get_text()
+        return table
+
+    def traffback_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[3]
+        table = table.get_text()
+        return table
+
+    def subscribe_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[4]
+        table = table.get_text()
+        return table
+
+    def conversion_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[5]
+        table = table.get_text()
+        return table
+
+    def unsubscribe_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[6]
+        table = table.get_text()
+        return table
+
+    def rebill_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[7]
+        table = table.get_text()
+        return table
+
+    def buyout_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[8]
+        table = table.get_text()
+        return table
+    def NK_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[9]
+        table = table.get_text()
+        return table
+
+    def ERK_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[10]
+        table = table.get_text()
+        return table
+
+    def partner_pay_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[11]
+        table = table.get_text()
+        return table
+
+    def system_pay_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[12]
+        table = table.get_text()
+        return table
+
+    def all_pay_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[13]
+        table = table.get_text()
+        return table
+
+    def complaints_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[14]
+        table = table.get_text()
+        return table
