@@ -15,6 +15,12 @@ class StatsMt(BaseMt, StatsLocators):
         soup = BeautifulSoup(page_txt, 'html.parser')
         return soup
 
+    def date_take(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[0]
+        table = table.get_text()
+        return table
+
     def transition_take(self, soup):
         table = soup.find_all('tr')[2]
         table = table.find_all('td')[1]
