@@ -42,7 +42,7 @@ class BaseMt:
 
     def image_load(self, how, what):
         A = self.browser.find_element(how, what)
-        A.send_keys("F:\\ads.def.doctor\\page\\adsautotest.jpg")
+        A.send_keys("")
 
     def just_click(self):
         request = requests.get(self)
