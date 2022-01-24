@@ -42,18 +42,18 @@ class StatisticsMt:
         print(f'\nunic user before request {stats_pars1}, after request {stats_pars2}')
         assert stats_pars1 != stats_pars2, "they equal"
 
-    # def traffback_request(self, link):
-    #     Page = StatsMt(self, link)
-    #     Page.go_to_statistic()
-    #     stats = Page.save_stats()
-    #     stats_pars1 = Page.traffback_take(stats)
-    #     SubscribeMt.traffback(LinksReqTds.tds_click_test_traffback)
-    #     time.sleep(20)
-    #     Page.ref()
-    #     stats = Page.save_stats()
-    #     stats_pars2 = Page.traffback_take(stats)
-    #     print(f'\ntraffback before request {stats_pars1}, after request {stats_pars2}')
-    #     assert stats_pars1 != stats_pars2, "they equal"
+    def traffback_request(self, link):
+        Page = StatsMt(self, link)
+        Page.go_to_statistic()
+        stats = Page.save_stats()
+        stats_pars1 = Page.traffback_take(stats)
+        SubscribeMt.traffback(LinksReqTds.tds_click_test_traffback)
+        time.sleep(20)
+        Page.ref()
+        stats = Page.save_stats()
+        stats_pars2 = Page.traffback_take(stats)
+        print(f'\ntraffback before request {stats_pars1}, after request {stats_pars2}')
+        assert stats_pars1 != stats_pars2, "they equal"
 
     def subscribe(self, link):
         Page = StatsMt(self, link)
@@ -61,7 +61,7 @@ class StatisticsMt:
         stats = Page.save_stats()
         stats_pars1 = Page.subscribe_take(stats)
         SubscribeMt.sub_on(LinksReqTds.tds_click_test)
-        time.sleep(40)
+        time.sleep(60)
         Page.ref()
         stats = Page.save_stats()
         stats_pars2 = Page.subscribe_take(stats)
@@ -79,7 +79,7 @@ class StatisticsMt:
         stats_pars1 = str(round(stats_pars1, 1))
         stats_pars1 = f'1:{stats_pars1}'
         print(f'\nconversion {stats_pars1}, conversion on site {stats_pars3}')
-        assert stats_pars1 == stats_pars3, "they didn\'t equal"
+        assert stats_pars1 == stats_pars3, f"they didn\'t equal {stats_pars1} != {stats_pars3}"
 
     def unsub(self, link):
         Page = StatsMt(self, link)
@@ -87,7 +87,7 @@ class StatisticsMt:
         stats = Page.save_stats()
         stats_pars1 = Page.unsubscribe_take(stats)
         SubscribeMt.sub_off(LinksReqTds.tds_click_test)
-        time.sleep(40)
+        time.sleep(60)
         Page.ref()
         stats = Page.save_stats()
         stats_pars2 = Page.unsubscribe_take(stats)
@@ -100,10 +100,66 @@ class StatisticsMt:
         stats = Page.save_stats()
         stats_pars1 = Page.rebill_take(stats)
         SubscribeMt.rebill(LinksReqTds.tds_click_test)
-        time.sleep(30)
+        time.sleep(60)
         Page.ref()
         stats = Page.save_stats()
         stats_pars2 = Page.rebill_take(stats)
         print(f'\nrebill before request {stats_pars1}, after request {stats_pars2}')
         assert stats_pars1 != stats_pars2, "they equal"
+
+    def buyout(self, link):
+        Page = StatsMt(self, link)
+        Page.go_to_statistic()
+        stats = Page.save_stats()
+        stats_pars1 = Page.buyout_take(stats)
+        SubscribeMt.sub_on(LinksReqTds.tds_click_test_1)
+        time.sleep(80)
+        Page.ref()
+        stats = Page.save_stats()
+        stats_pars2 = Page.buyout_take(stats)
+        print(f'\nbuyout before request {stats_pars1}, after request {stats_pars2}')
+        assert stats_pars1 != stats_pars2, "they equal"
+
+    def NK(self, link):
+        Page = StatsMt(self, link)
+        Page.go_to_statistic()
+        stats = Page.save_stats()
+        stats_pars1 = Page.NK_take(stats)
+        print(f'\nИК {stats_pars1}')
+
+    def EPC(self, link):
+        Page = StatsMt(self, link)
+        Page.go_to_statistic()
+        stats = Page.save_stats()
+        stats_pars1 = Page.ERC_take(stats)
+        print(f'\nEPC {stats_pars1}')
+
+    def partner(self, link):
+        Page = StatsMt(self, link)
+        Page.go_to_statistic()
+        stats = Page.save_stats()
+        stats_pars1 = Page.partner_pay_take(stats)
+        print(f'\npartner {stats_pars1}')
+
+    def system_pay(self, link):
+        Page = StatsMt(self, link)
+        Page.go_to_statistic()
+        stats = Page.save_stats()
+        stats_pars1 = Page.system_pay_take(stats)
+        print(f'\nsystem {stats_pars1}')
+
+    def all_pay(self, link):
+        Page = StatsMt(self, link)
+        Page.go_to_statistic()
+        stats = Page.save_stats()
+        stats_pars1 = Page.all_pay_take(stats)
+        print(f'\nall pays {stats_pars1}')
+
+    def complaints(self, link):
+        Page = StatsMt(self, link)
+        Page.go_to_statistic()
+        stats = Page.save_stats()
+        stats_pars1 = Page.complaints_take(stats)
+        print(f'\nnumber of user complaints {stats_pars1}')
+
 
