@@ -14,6 +14,12 @@ class BaseMt:
     def ref(self):
         self.browser.refresh()
 
+    def switch_to_new_win(self):
+        self.browser.switch_to.window(self.browser.window_handles[1])
+
+    def switch_to_old_win(self):
+        self.browser.switch_to.window(self.browser.window_handles[0])
+
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
