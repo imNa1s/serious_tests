@@ -3,21 +3,39 @@ import time
 import requests
 
 from core.core_mt import BaseMt
-from core.links import SiteLinks, LinksReqTds
+from core.links import SiteLinks
 from core.login_page import LoginPage
 from core.request_stf import Request_stuff, Request_urls
+from core.partner_page import GoToPartnerPage, PartnerNavBorder, PartnerCreate
 
 
-def login_pass(browser, link):
-    link_check = SiteLinks.login_link_test1
-    Page = LoginPage(browser, link)
-    Page.open()
-    Page.write_email_admin()
-    Page.write_password_admin()
-    Page.login_button()
-    time.sleep(2)
-    to_check = browser.current_url
-    assert link_check != to_check, "you did't login"
+class BrowserMt:
+    def login_pass(self, link):
+        link_check = SiteLinks.login_link_test1
+        Page = LoginPage(self, link)
+        Page.open()
+        Page.write_email_admin()
+        Page.write_password_admin()
+        Page.login_button()
+        time.sleep(2)
+        to_check = self.current_url
+        assert link_check != to_check, "you did't login"
+
+    def partner_redirect(self, link):
+        Page = GoToPartnerPage(self, link)
+        Page.partner_button()
+        Page.testmail_parnter()
+        Page.testmail_autorization()
+
+    def create_sourse(self, link):
+        Page = PartnerNavBorder(self, link)
+        Page.partner_stream()
+        Page = PartnerCreate(self, link)
+        Page.partner_str_create()
+        Page.type_stream()
+        Page.stream_name()
+        Page.stream_url()
+        Page.create_button()
 
 
 class SubscribeMt:
