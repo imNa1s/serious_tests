@@ -10,4 +10,3 @@ class LinksReqNotify:
 
 class SiteLinks:
     login_link_test1 = 'http://test1.admin.clickpp.ru/site/login'
-
