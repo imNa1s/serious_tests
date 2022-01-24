@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 
 
 class StatsMt(BaseMt, StatsLocators):
+
     def go_to_statistic(self):
         assert self.is_element_present(*StatsLocators.statistic_button), "can't find"
         self.find_el_click(*StatsLocators.statistic_button)
@@ -68,13 +69,14 @@ class StatsMt(BaseMt, StatsLocators):
         table = table.find_all('td')[8]
         table = table.get_text()
         return table
+
     def NK_take(self, soup):
         table = soup.find_all('tr')[2]
         table = table.find_all('td')[9]
         table = table.get_text()
         return table
 
-    def ERK_take(self, soup):
+    def ERC_take(self, soup):
         table = soup.find_all('tr')[2]
         table = table.find_all('td')[10]
         table = table.get_text()
