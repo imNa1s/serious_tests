@@ -6,7 +6,7 @@ from core.core_mt import BaseMt
 from core.links import SiteLinks
 from core.login_page import LoginPage
 from core.request_stf import Request_stuff, Request_urls
-from core.partner_page import GoToPartnerPage, PartnerNavBorder, PartnerCreate
+from core.partner_page import GoToPartnerPage, PartnerNavBorder, PartnerCreateSource, PartnerCreateStream
 
 
 class BrowserMt:
@@ -27,15 +27,34 @@ class BrowserMt:
         Page.testmail_parnter()
         Page.testmail_autorization()
 
-    def create_sourse(self, link):
+    def create_source(self, link):
+        Page = PartnerNavBorder(self, link)
+        Page.partner_source()
+        Page = PartnerCreateSource(self, link)
+        Page.partner_source_create()
+        Page.type_source()
+        Page.source_name()
+        Page.source_url()
+        Page.create_source_button()
+
+    def create_stream(self, link):
         Page = PartnerNavBorder(self, link)
         Page.partner_stream()
-        Page = PartnerCreate(self, link)
-        Page.partner_str_create()
-        Page.type_stream()
-        Page.stream_name()
-        Page.stream_url()
-        Page.create_button()
+        Page = PartnerCreateStream(self, link)
+        Page.partner_stream_create()
+        Page.partner_stream_name()
+        Page.stream_source()
+        Page.stream_traffback_url()
+        Page.stream_postback()
+        Page.postback_actions_all()
+        Page.type_stream_redirect()
+        Page.payment_scheme()
+        Page.landing_page_display()
+        Page.ya_redirect_ban()
+        Page.landing_mts()
+        Page.choice_iplayer()
+        Page.add_land_button()
+        Page.stream_create_button()
 
 
 class SubscribeMt:
