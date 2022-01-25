@@ -2,6 +2,7 @@ from selenium.webdriver.support.ui import Select
 
 from core.core_mt import BaseMt
 from core.locators import PartnerLocators
+from core.statistc_base import StatsMt
 
 
 class GoToPartnerPage(BaseMt, PartnerLocators):
@@ -28,11 +29,6 @@ class PartnerNavBorder(BaseMt, PartnerLocators):
         assert self.is_element_present(*PartnerLocators.partner_stream), 'can\'t find button stream'
         self.find_el_click(*PartnerLocators.partner_stream)
 
-    # def partner_id(self):
-    #     assert self.is_element_present(*PartnerLocators.partner_id), 'can\'t find id'
-    #     id_number = self.browser.find_element(*PartnerLocators.partner_id).text
-    #     return print(id_number)
-
 
 class PartnerCreate(BaseMt, PartnerLocators):
     def partner_str_create(self):
@@ -56,3 +52,10 @@ class PartnerCreate(BaseMt, PartnerLocators):
     def create_button(self):
         assert self.is_element_present(*PartnerLocators.create_stream_button), 'can\'t find button create'
         self.find_el_click(*PartnerLocators.create_stream_button)
+
+
+class PartnerHelpMt(StatsMt, PartnerLocators):
+    def partner_id(self):
+        assert self.is_element_present(*PartnerLocators.partner_id), 'can\'t find id'
+        id_number = self.browser.find_element(*PartnerLocators.partner_id).text
+        return print(id_number)
