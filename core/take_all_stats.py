@@ -92,7 +92,7 @@ class StatisticsMt:
         stats = Page.save_stats()
         stats_pars2 = Page.unsubscribe_take(stats)
         print(f'\nunsub before request {stats_pars1}, after request {stats_pars2}')
-        assert stats_pars1 != stats_pars2, "they equal"
+        assert stats_pars1 != stats_pars2, f"they equal {stats_pars1}={stats_pars2}"
 
     def make_rebill(self, link):
         Page = StatsMt(self, link)
