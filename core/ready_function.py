@@ -48,7 +48,6 @@ class BrowserMt:
         Page.stream_postback()
         Page.postback_actions_all()
         Page.type_stream_redirect()
-        Page.payment_scheme()
         Page.landing_page_display()
         Page.ya_redirect_ban()
         Page.landing_mts()
