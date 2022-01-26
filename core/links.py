@@ -4,7 +4,7 @@ class LinksReqTds:
     tds_click_test_traffback = 'http://test1.clicktds.ru/TIpWCGIljV'
     postback = 'http://tds.click/0f5ee17/postback?subid={extra_param}&status={action}&tid={transaction_id}&payout={' \
                'income}&number={msisdn}&label1={label1}&label2={label2}&time={time}&stream_id={' \
-               'stream_id}&landing_id={landing_id}&operator={operator} '
+               'stream_id}&landing_id={landing_id}&operator={operator}'
 
 
 class LinksReqNotify:
@@ -14,3 +14,6 @@ class LinksReqNotify:
 class SiteLinks:
     login_link_test1 = 'http://test1.admin.clickpp.ru/site/login'
 
+
+class LinksToCheck:
+    create_stream_link = 'https://test1.clickpp.ru/partners/streams/create'
