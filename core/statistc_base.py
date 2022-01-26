@@ -1,6 +1,5 @@
 from core.core_mt import BaseMt
 from core.locators import StatsLocators
-from bs4 import BeautifulSoup
 
 
 class StatsMt(BaseMt, StatsLocators):
@@ -10,11 +9,6 @@ class StatsMt(BaseMt, StatsLocators):
         self.find_el_click(*StatsLocators.statistic_button)
         assert self.is_element_present(*StatsLocators.main_statistic), "can't find"
         self.find_el_click(*StatsLocators.main_statistic)
-
-    def save_stats(self):
-        page_txt = self.browser.page_source
-        soup = BeautifulSoup(page_txt, 'html.parser')
-        return soup
 
     def date_take(self, soup):
         table = soup.find_all('tr')[2]
