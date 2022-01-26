@@ -1,4 +1,5 @@
 import requests
+from bs4 import BeautifulSoup
 from selenium.common.exceptions import NoSuchElementException
 
 
@@ -54,3 +55,8 @@ class BaseMt:
         request = requests.get(self)
         assert request.status_code == requests.codes.ok, f'request status code = {request.status_code}'
         return request
+
+    def save_stats(self):
+        page_txt = self.browser.page_source
+        soup = BeautifulSoup(page_txt, 'html.parser')
+        return soup

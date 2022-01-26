@@ -1,6 +1,6 @@
 import pytest
 
-from core.links import SiteLinks
+from core.links import SiteLinks, LinksToCheck
 from core.ready_function import BrowserMt
 
 
@@ -11,3 +11,5 @@ def test_create_stream(browser):
     BrowserMt.login_pass(browser, link)
     BrowserMt.partner_redirect(browser, link)
     BrowserMt.create_stream(browser, link)
+    check = browser.current_url
+    assert check != LinksToCheck.create_stream_link, 'stream not created'
