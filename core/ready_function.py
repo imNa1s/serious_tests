@@ -19,7 +19,7 @@ class BrowserMt:
         Page.login_button()
         time.sleep(2)
         to_check = self.current_url
-        assert link_check != to_check, "you did't login"
+        assert link_check != to_check, "you didn't login"
 
     def partner_redirect(self, link):
         Page = GoToPartnerPage(self, link)
