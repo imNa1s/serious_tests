@@ -3,7 +3,6 @@ from core.locators import StatsLocators
 
 
 class StatsMt(BaseMt, StatsLocators):
-
     def go_to_statistic(self):
         assert self.is_element_present(*StatsLocators.statistic_button), "can't find"
         self.find_el_click(*StatsLocators.statistic_button)
