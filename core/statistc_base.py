@@ -99,7 +99,18 @@ class StatsMt(BaseMt, StatsLocators):
         table = table.get_text()
         return table
 
+
 class SubStatsMt(BaseMt, StatsLocators):
     def go_to_sub_statistic(self):
+        assert self.is_element_present(*StatsLocators.statistic_button), "can't find button statistic"
+        self.find_el_click(*StatsLocators.statistic_button)
+        assert self.is_element_present(*StatsLocators.main_statistic), "can't find all stat's button"
+        self.find_el_click(*StatsLocators.main_statistic)
         assert self.is_element_present(*StatsLocators.sub_statistic), "can't find button sub stat's"
         self.find_el_click(*StatsLocators.sub_statistic)
+
+    def date_stats(self, soup):
+        table = soup.find_all('tr')[2]
+        table = table.find_all('td')[0]
+        table = table.get_text()
+        return table
