@@ -11,6 +11,7 @@ class LoginLocators:
 class StatsLocators:
     statistic_button = (By.CSS_SELECTOR, '#main-menu > li:nth-child(2)')
     main_statistic = (By.CSS_SELECTOR, '#main-menu > li.active > ul > li:nth-child(1) > a > span')
+    sub_statistic = (By.CSS_SELECTOR, '#w18 > li:nth-child(2)')
 
 
 class PartnerLocators:
