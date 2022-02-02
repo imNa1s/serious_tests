@@ -4,9 +4,9 @@ from core.locators import StatsLocators
 
 class StatsMt(BaseMt, StatsLocators):
     def go_to_statistic(self):
-        assert self.is_element_present(*StatsLocators.statistic_button), "can't find"
+        assert self.is_element_present(*StatsLocators.statistic_button), "can't find button statistic"
         self.find_el_click(*StatsLocators.statistic_button)
-        assert self.is_element_present(*StatsLocators.main_statistic), "can't find"
+        assert self.is_element_present(*StatsLocators.main_statistic), "can't find all stat's button"
         self.find_el_click(*StatsLocators.main_statistic)
 
     def date_take(self, soup):
@@ -98,3 +98,8 @@ class StatsMt(BaseMt, StatsLocators):
         table = table.find_all('td')[14]
         table = table.get_text()
         return table
+
+class SubStatsMt(BaseMt, StatsLocators):
+    def go_to_sub_statistic(self):
+        assert self.is_element_present(*StatsLocators.sub_statistic), "can't find button sub stat's"
+        self.find_el_click(*StatsLocators.sub_statistic)
