@@ -40,7 +40,7 @@ def test_rebill():
 
 
 @pytest.mark.sub
-@pytest.mark.rebill
+@pytest.mark.click_id
 def test_click_id():
     click = Request_stuff.click_id_take(LinksReqTds.tds_click_test)
     click = len(click)
