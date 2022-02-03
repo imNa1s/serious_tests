@@ -32,14 +32,6 @@ def test_rebill():
 
 
 @pytest.mark.sub
-@pytest.mark.rebill
-def test_rebill():
-    request_link = Request_urls.sub_rebill_request_url(click_id)
-    request = BaseMt.just_click(request_link)
-    assert request.status_code == requests.codes.ok, f'resub didn\'t done, status code = {request.status_code}"'
-
-
-@pytest.mark.sub
 @pytest.mark.click_id
 def test_click_id():
     click = Request_stuff.click_id_take(LinksReqTds.tds_click_test)
