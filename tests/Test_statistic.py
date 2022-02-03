@@ -3,7 +3,7 @@ import pytest
 
 from core.links import SiteLinks
 from core.ready_function import BrowserMt
-from core.take_all_stats import StatisticsMt
+from core.take_main_stats import StatisticsMt
 
 
 @pytest.mark.stats
