@@ -56,7 +56,7 @@ def test_click_id():
 @pytest.mark.sub
 @pytest.mark.on
 def test_sub():
-    request_link = Request_urls.sub_on_request_url(click_id2)
+    request_link = Request_urls.sub_on2_request_url(click_id2)
     request = BaseMt.just_click(request_link)
     assert request.status_code == requests.codes.ok, f'sub didn\'t done, status code = {request.status_code}"'
 
@@ -65,7 +65,7 @@ def test_sub():
 @pytest.mark.sub
 @pytest.mark.off
 def test_unsub():
-    request_link = Request_urls.sub_off_request_url(click_id2)
+    request_link = Request_urls.sub_off2_request_url(click_id2)
     request = BaseMt.just_click(request_link)
     assert request.status_code == requests.codes.ok, f'unsub didn\'t done, status code = {request.status_code}"'
 
@@ -74,6 +74,6 @@ def test_unsub():
 @pytest.mark.sub
 @pytest.mark.rebill
 def test_rebill():
-    request_link = Request_urls.sub_rebill_request_url(click_id)
+    request_link = Request_urls.sub_rebill2_request_url(click_id2)
     request = BaseMt.just_click(request_link)
     assert request.status_code == requests.codes.ok, f'resub didn\'t done, status code = {request.status_code}"'
