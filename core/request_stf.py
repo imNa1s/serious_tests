@@ -54,3 +54,45 @@ class Request_urls:
         }
         valid_link = f'{head_link}{urlencode(params)}'
         return valid_link
+
+    def sub_on2_request_url(self):
+        head_link = f'{LinksReqNotify.notify_test2}'
+        params = {
+            'sum': '30',
+            'transaction_type': 'on',
+            'transaction_id': f'{randint(10000000, 99999999)}',
+            'operator_id': '1',
+            'label1': f'{self}',
+            'click_id': '4b6cf84033d7438_bcfc003632cab4a3a091e0199a3d8766',
+            'deferred': '0'
+        }
+        valid_link = f'{head_link}{urlencode(params)}'
+        return valid_link
+
+    def sub_off2_request_url(self):
+        head_link = f'{LinksReqNotify.notify_test2}'
+        params = {
+            'sum': '30',
+            'transaction_type': 'off',
+            'transaction_id': f'{randint(10000000, 99999999)}',
+            'operator_id': '1',
+            'label1': f'{self}',
+            'click_id': '4b6cf84033d7438_bcfc003632cab4a3a091e0199a3d8766',
+            'deferred': '0'
+        }
+        valid_link = f'{head_link}{urlencode(params)}'
+        return valid_link
+
+    def sub_rebill2_request_url(self):
+        head_link = f'{LinksReqNotify.notify_test2}'
+        params = {
+            'sum': '30',
+            'transaction_type': 'rebill',
+            'transaction_id': f'{randint(10000000, 99999999)}',
+            'operator_id': '1',
+            'label1': f'{self}',
+            'click_id': '4b6cf84033d7438_bcfc003632cab4a3a091e0199a3d8766',
+            'deferred': '0'
+        }
+        valid_link = f'{head_link}{urlencode(params)}'
+        return valid_link
