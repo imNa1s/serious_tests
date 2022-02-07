@@ -5,10 +5,14 @@ class LinksReqTds:
     postback = 'http://tds.click/0f5ee17/postback?subid={extra_param}&status={action}&tid={transaction_id}&payout={' \
                'income}&number={msisdn}&label1={label1}&label2={label2}&time={time}&stream_id={' \
                'stream_id}&landing_id={landing_id}&operator={operator}'
+    tds_click_test2 = 'http://test2.clicktds.ru/__tGIG5qcK?debug_operator_id=1&tds_no_redirect=1'
+    tds_click_test2_buy = 'http://test2.clicktds.ru/Z3bvoiDNcm?debug_operator_id=1&tds_no_redirect=1'
+
 
 
 class LinksReqNotify:
     notify_test = 'http://test1.notify.clickpp.ru/mobbilling/index?'
+    notify_test2 = 'http://test2.notify.clickpp.ru/mobbilling/index?'
 
 
 class SiteLinks:
