@@ -4,7 +4,7 @@ import pytest
 from core.links import SiteLinks
 from core.login_page import LoginPage
 from core.partner_page import GoToPartnerPage
-from core.ready_function import BrowserMt
+from core.ready_page_mt import BrowserMt
 
 
 @pytest.mark.login

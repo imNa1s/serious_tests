@@ -1,7 +1,7 @@
 import pytest
 
 from core.links import SiteLinks, LinksToCheck
-from core.ready_function import BrowserMt
+from core.ready_page_mt import BrowserMt
 
 
 @pytest.mark.create
