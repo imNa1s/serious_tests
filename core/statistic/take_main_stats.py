@@ -10,7 +10,7 @@ class StatisticsMt:
     def stats_date(self, link):
         current_date = str(datetime.now().date())
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.date_take(stats)
         print(f'\ntoday\'s date - {current_date}, date last request - {stats_pars1}')
@@ -18,7 +18,7 @@ class StatisticsMt:
 
     def transition(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.transition_take(stats)
         SubscribeMt.redirect_without_sub(LinksReqTds.tds_click_test)
@@ -31,7 +31,7 @@ class StatisticsMt:
 
     def unic_request(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.unic_take(stats)
         SubscribeMt.redirect_without_sub(LinksReqTds.tds_click_test)
@@ -44,7 +44,7 @@ class StatisticsMt:
 
     def traffback_request(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.traffback_take(stats)
         SubscribeMt.traffback(LinksReqTds.tds_click_test_traffback)
@@ -57,7 +57,7 @@ class StatisticsMt:
 
     def subscribe(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.subscribe_take(stats)
         SubscribeMt.sub_on(LinksReqTds.tds_click_test)
@@ -70,7 +70,7 @@ class StatisticsMt:
 
     def conversion(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.unic_take(stats)
         stats_pars2 = Page.subscribe_take(stats)
@@ -83,7 +83,7 @@ class StatisticsMt:
 
     def unsub(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.unsubscribe_take(stats)
         SubscribeMt.sub_off(LinksReqTds.tds_click_test)
@@ -96,7 +96,7 @@ class StatisticsMt:
 
     def make_rebill(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.rebill_take(stats)
         SubscribeMt.rebill(LinksReqTds.tds_click_test)
@@ -109,7 +109,7 @@ class StatisticsMt:
 
     def buyout(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.buyout_take(stats)
         SubscribeMt.sub_on(LinksReqTds.tds_click_test_1)
@@ -122,42 +122,42 @@ class StatisticsMt:
 
     def NK(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.NK_take(stats)
         print(f'\nИК {stats_pars1}')
 
     def EPC(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.ERC_take(stats)
         print(f'\nEPC {stats_pars1}')
 
     def partner(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.partner_pay_take(stats)
         print(f'\npartner {stats_pars1}')
 
     def system_pay(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.system_pay_take(stats)
         print(f'\nsystem {stats_pars1}')
 
     def all_pay(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.all_pay_take(stats)
         print(f'\nall pays {stats_pars1}')
 
     def complaints(self, link):
         Page = StatsMt(self, link)
-        Page.go_to_statistic()
+        Page.go_to_main_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.complaints_take(stats)
         print(f'\nnumber of user complaints {stats_pars1}')
