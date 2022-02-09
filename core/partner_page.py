@@ -1,11 +1,9 @@
-import time
-
 from selenium.webdriver.support.ui import Select
 
 from core.core_mt import BaseMt
 from core.links import LinksReqTds
 from core.locators import PartnerLocators
-from core.main_statistic_base import StatsMt
+from core.statistic.main_statistic_base import StatsMt
 
 
 class GoToPartnerPage(BaseMt, PartnerLocators):

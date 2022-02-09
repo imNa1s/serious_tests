@@ -2,7 +2,7 @@ import time
 
 from core.links import LinksReqTds
 from core.ready_request_mt import SubscribeMt
-from core.main_statistic_base import StatsMt
+from core.statistic.main_statistic_base import StatsMt
 from datetime import datetime
 
 
