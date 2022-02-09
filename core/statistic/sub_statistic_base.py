@@ -3,6 +3,14 @@ from core.locators import StatsLocators
 
 
 class SubStatsMt(BaseMt, StatsLocators):
+    def go_to_sub_statistic(self):
+        assert self.is_element_present(*StatsLocators.statistic_button), "can't find button statistic"
+        self.find_el_click(*StatsLocators.statistic_button)
+        assert self.is_element_present(*StatsLocators.main_statistic), "can't find all stat's button"
+        self.find_el_click(*StatsLocators.main_statistic)
+        assert self.is_element_present(*StatsLocators.sub_statistic), "can't find sub stat's button"
+        self.find_el_click(*StatsLocators.sub_statistic)
+
     def sub_date_take(self, soup):
         table = soup.find_all('tr')[2]
         table = table.find_all('td')[0]
