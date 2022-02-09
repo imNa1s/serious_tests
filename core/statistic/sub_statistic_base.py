@@ -2,7 +2,7 @@ from core.core_mt import BaseMt
 from core.locators import StatsLocators
 
 
-class SubStatsMt(BaseMt, StatsLocators):
+class TakeSubStatsMt(BaseMt, StatsLocators):
     def go_to_sub_statistic(self):
         assert self.is_element_present(*StatsLocators.statistic_button), "can't find button statistic"
         self.find_el_click(*StatsLocators.statistic_button)
