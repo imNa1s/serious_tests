@@ -36,6 +36,10 @@ class PartnerNavBorder(BaseMt, PartnerLocators):
         assert self.is_element_present(*PartnerLocators.partner_stream), 'can\'t find button stream'
         self.find_el_click(*PartnerLocators.partner_stream)
 
+    def partner_tickets(self):
+        assert self.is_element_present(*PartnerLocators.partner_tickets), 'can\'t find button tickets'
+        self.find_el_click(*PartnerLocators.partner_tickets)
+
 
 class PartnerCreateSource(BaseMt, PartnerLocators):
     def partner_source_create(self):
@@ -141,6 +145,34 @@ class PartnerCreateStream(BaseMt, PartnerLocators):
     def stream_create_button(self):
         assert self.is_element_present(*PartnerLocators.create_stream_btn), 'can\'t find button create stream'
         self.find_el_click(*PartnerLocators.create_stream_btn)
+
+
+class PartnerTicketsMt(StatsMt, PartnerLocators):
+    def ticket_create(self):
+        assert self.is_element_present(*PartnerLocators.create_button_ticket), 'can\'t find button create ticket'
+        self.find_el_click(*PartnerLocators.create_button_ticket)
+
+    def ticket_type(self):
+        assert self.is_element_present(*PartnerLocators.ticket_type_select), 'can\'t find field source'
+        select = Select(self.browser.find_element(*PartnerLocators.ticket_type_select))
+        select.select_by_value('1')
+
+    def ticket_type_message(self):
+        assert self.is_element_present(*PartnerLocators.ticket_message_type), 'can\'t find field massage type'
+        self.find_el_write(*PartnerLocators.ticket_message_type, 'autotest')
+
+    def ticket_message(self):
+        assert self.is_element_present(*PartnerLocators.ticket_message), 'can\'t find field massage'
+        self.find_el_write(*PartnerLocators.ticket_message, 'autotest')
+
+    def ticket_send_btn(self):
+        assert self.is_element_present(*PartnerLocators.btn_send_ticket), 'can\'t find button send ticket'
+        self.find_el_click(*PartnerLocators.btn_send_ticket)
+
+    def see_alert(self):
+        assert self.is_element_present(*PartnerLocators.alert_ticket_icon), 'no field alerts'
+        how_much = self.browser.find_element(*PartnerLocators.alert_ticket_icon)
+        return how_much.text
 
 
 class PartnerHelpMt(StatsMt, PartnerLocators):
