@@ -42,67 +42,67 @@ class SubStatisticsMt:
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.unsub_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\nnumber of unsub{stats_pars1}')
 
     def sub_stats_unsub_1st(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.unsub_1st_day_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\nnumber of unsub in 1st day {stats_pars1}')
 
     def sub_stats_rebill(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.sub_rebill_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\nnumber of rebill {stats_pars1}')
 
     def sub_stats_rebill_abonent(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.rebill_on_abonent_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\nnumber of rebill abonent {stats_pars1}')
 
     def sub_stats_price(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.sub_price_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\n price of subscribe {stats_pars1}')
 
     def sub_stats_buyout(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.sub_buyout_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\nnumber of buyout{stats_pars1}')
 
     def sub_stats_rebill_buyout(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.sub_rebill_buyout_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\nprice of buyout rebill {stats_pars1}')
 
     def sub_stats_partner(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.sub_partner_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\npay to partner {stats_pars1}')
 
     def sub_stats_system(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.sub_system_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\npay to system {stats_pars1}')
 
     def sub_stats_all_pay(self, link):
         Page = TakeSubStatsMt(self, link)
         Page.go_to_sub_statistic()
         stats = Page.save_stats()
         stats_pars1 = Page.sub_all_pay_take(stats)
-        print(f'\nnumber of unsub today {stats_pars1}')
+        print(f'\nallready taken {stats_pars1}')
