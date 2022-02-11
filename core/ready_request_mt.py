@@ -21,7 +21,7 @@ class SubscribeMt:
         click_id = Request_stuff.click_id_take(self)
         request_link = Request_urls.sub_on_request_url(click_id)
         BaseMt.just_click(request_link)
-        time.sleep(20)
+        time.sleep(30)
         request_link = Request_urls.sub_rebill_request_url(click_id)
         request = BaseMt.just_click(request_link)
         assert request.status_code == requests.codes.ok, f'sub didn\'t done, status code = {request.status_code}"'
@@ -34,7 +34,7 @@ class SubscribeMt:
         click_id = Request_stuff.click_id_take(self)
         request_link = Request_urls.sub_on_request_url(click_id)
         BaseMt.just_click(request_link)
-        time.sleep(20)
+        time.sleep(30)
         request_link = Request_urls.sub_off_request_url(click_id)
         request = BaseMt.just_click(request_link)
         assert request.status_code == requests.codes.ok, f'sub didn\'t done, status code = {request.status_code}"'
