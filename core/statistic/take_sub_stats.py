@@ -50,7 +50,13 @@ class SubStatisticsMt:
         Page = TakeSubStatsMt(self, link)
         stats = Page.save_stats()
         stats_pars1 = Page.unsub_1st_day_take(stats)
-        print(f'\nnumber of unsub in 1st day {stats_pars1}')
+        SubscribeMt.sub_off(LinksReqTds.tds_click_test)
+        time.sleep(60)
+        Page.ref()
+        stats = Page.save_stats()
+        stats_pars2 = Page.unsub_1st_day_take(stats)
+        print(f'\nnumber of unsub in 1st day {stats_pars1}, after request {stats_pars2}')
+        assert stats_pars1 != stats_pars2, 'unsub in 1st day without change'
 
     def sub_stats_rebill(self, link):
         Page = TakeSubStatsMt(self, link)
