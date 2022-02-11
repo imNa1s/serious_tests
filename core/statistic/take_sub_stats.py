@@ -80,7 +80,6 @@ class SubStatisticsMt:
         print(f'\nnumber of rebill abonent {on_abonent}, {rebill_on}')
         assert str(on_abonent) == rebill_on, f'they not equal {on_abonent}, {rebill_on}'
 
-
     def sub_stats_price(self, link):
         Page = TakeSubStatsMt(self, link)
         stats = Page.save_stats()
