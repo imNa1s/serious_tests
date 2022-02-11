@@ -58,7 +58,7 @@ def test_unsub_1st(browser):
 
 @pytest.mark.sub_stats
 @pytest.mark.rebill
-def test_unsub(browser):
+def test_rebill(browser):
     link = SiteLinks.login_link_test1
     BrowserMt.login_pass(browser, link)
     SubStatisticsMt.sub_stats_date(browser, browser.current_url)
@@ -68,7 +68,7 @@ def test_unsub(browser):
 
 @pytest.mark.sub_stats
 @pytest.mark.rebill_abonent
-def test_unsub_abonent(browser):
+def test_rebill_abonent(browser):
     link = SiteLinks.login_link_test1
     BrowserMt.login_pass(browser, link)
     SubStatisticsMt.sub_stats_date(browser, browser.current_url)
