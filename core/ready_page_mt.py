@@ -50,6 +50,7 @@ class BrowserMt:
         Page.choice_iplayer()
         Page.add_land_button()
         Page.stream_create_button()
+        time.sleep(2)
 
     def create_tiket(self, link):
         Page = PartnerNavBorder(self, link)
