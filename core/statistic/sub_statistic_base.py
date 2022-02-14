@@ -55,14 +55,14 @@ class TakeSubStatsMt(BaseMt, StatsLocators):
         return table
 
     def rebill_on_abonent_take(self, soup):
-        table = soup.find_all('tbody')[2]
+        table = soup.find_all('tbody')[1]
         table = table.find_all('tr')[0]
         table = table.find_all('td')[6]
         table = table.get_text()
         return table
 
     def sub_price_take(self, soup):
-        table = soup.find_all('tbody')[2]
+        table = soup.find_all('tbody')[1]
         table = table.find_all('tr')[0]
         table = table.find_all('td')[7]
         table = table.get_text()
@@ -76,7 +76,7 @@ class TakeSubStatsMt(BaseMt, StatsLocators):
         return table
 
     def sub_rebill_buyout_take(self, soup):
-        table = soup.find_all('tbody')[2]
+        table = soup.find_all('tbody')[1]
         table = table.find_all('tr')[0]
         table = table.find_all('td')[9]
         table = table.get_text()
@@ -85,12 +85,12 @@ class TakeSubStatsMt(BaseMt, StatsLocators):
     def sub_partner_take(self, soup):
         table = soup.find_all('tbody')[2]
         table = table.find_all('tr')[0]
-        table = table.find_all('td')[10]
+        table = table.find_all('td')[9]
         table = table.get_text()
         return table
 
     def sub_system_take(self, soup):
-        table = soup.find_all('tbody')[2]
+        table = soup.find_all('tbody')[1]
         table = table.find_all('tr')[0]
         table = table.find_all('td')[11]
         table = table.get_text()
@@ -98,7 +98,7 @@ class TakeSubStatsMt(BaseMt, StatsLocators):
 
     def sub_all_pay_take(self, soup):
         table = soup.find_all('tbody')[2]
-        table = table.find_all('tr')[0]
-        table = table.find_all('td')[12]
+        table = table.find_all('tr')[1]
+        table = table.find_all('td')[11]
         table = table.get_text()
         return table
