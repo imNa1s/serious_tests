@@ -2,8 +2,8 @@ import time
 import pytest
 
 from core.links import SiteLinks
-from core.login_page import LoginPage
-from core.partner_page import GoToPartnerPage
+from core.Page_methods.login_page import LoginPage
+from core.Page_methods.partner_page import GoToPartnerPage
 from core.ready_page_mt import BrowserMt
 
 
