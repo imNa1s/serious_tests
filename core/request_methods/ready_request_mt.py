@@ -3,7 +3,7 @@ import time
 import requests
 
 from core.core_mt import BaseMt
-from core.request_stf import Request_stuff, Request_urls
+from core.request_methods.request_stf import Request_stuff, Request_urls
 
 
 class SubscribeMt:
