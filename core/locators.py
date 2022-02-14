@@ -10,14 +10,15 @@ class LoginLocators:
 
 class StatsLocators:
     statistic_button = (By.CSS_SELECTOR, '#main-menu > li:nth-child(2)')
-    main_statistic = (By.CSS_SELECTOR, '#main-menu > li.active > ul > li:nth-child(1) > a > span')
+    main_statistic = (By.CSS_SELECTOR, '#main-menu > li:nth-child(2) > ul > li:nth-child(1) > a > span')
     sub_statistic = (By.CSS_SELECTOR, '#w18 > li:nth-child(2)')
 
 
 class PartnerLocators:
-    test_authorization = (By.CSS_SELECTOR, 'div.p-l.p-r.p-t.p-b-0.white.user-panel > ul > li:nth-child(7) > a')
-    test_partner = (By.CSS_SELECTOR, 'tr[data-key="2"] > td[data-col-seq="1"] > div')
     partner_button = (By.CSS_SELECTOR, '#main-menu > li:nth-child(3)')
+    test_authorization = (By.CSS_SELECTOR, 'div.p-l.p-r.p-t.p-b-0.white.user-panel > ul > li:nth-child(7) > a')
+    test_settings = (By.CSS_SELECTOR, '#view > div > div.p-l.p-r.p-t.p-b-0.white.user-panel > ul > li:nth-child(6)')
+    test_partner = (By.CSS_SELECTOR, 'tr[data-key="2"] > td[data-col-seq="1"] > div')
     partner_settings = (By.CSS_SELECTOR, '#aside > div > div.hide-scroll > nav > ul > li:nth-child(10)')
     partner_id = (By.CSS_SELECTOR, 'div.col-md-6 > div > div > div:nth-child(1) > small > strong')
     partner_source = (By.CSS_SELECTOR, '#aside > div > div.hide-scroll > nav > ul > li:nth-child(2)')
@@ -27,6 +28,9 @@ class PartnerLocators:
     source_name = (By.CSS_SELECTOR, '#name')
     source_url = (By.CSS_SELECTOR, '#url')
     create_source_button = (By.CSS_SELECTOR, 'button.btn.primary.p-x-md')
+
+
+class StreamLocators:
     partner_stream = (By.CSS_SELECTOR, '#aside > div > div.hide-scroll > nav > ul > li:nth-child(3)')
     create_stream = (By.CSS_SELECTOR, 'a.btn.btn-sm.primary.pull-right')
     stream_name = (By.CSS_SELECTOR, 'div.col-xl-10 > div:nth-child(1) > div > input')
@@ -54,9 +58,17 @@ class PartnerLocators:
     landing_iplayer = (By.CSS_SELECTOR, 'div:nth-child(3) > label > div.p-a-xs > label > input')
     add_lending_btn = (By.CSS_SELECTOR, 'div.modal-footer.ng-scope > button.btn.primary.p-x-md')
     create_stream_btn = (By.CSS_SELECTOR, 'div.box-footer > button')
+
+
+class TicketLocators:
     create_button_ticket = (By.CSS_SELECTOR, '#view > div > div > div.box-header > h3 > button')
     ticket_type_select = (By.CSS_SELECTOR, '#type_id')
     ticket_message_type = (By.CSS_SELECTOR, '#topic')
     ticket_message = (By.CSS_SELECTOR, '#message')
     btn_send_ticket = (By.CSS_SELECTOR, 'div.modal-footer > button.btn.primary.p-x-md')
     alert_ticket_icon = (By.CSS_SELECTOR, '#main-menu > li:nth-child(6) > a > i > b')
+    adm_send_ticket_btn = (By.CSS_SELECTOR, 'li.nav-item.dropdown.open > div > a:nth-child(4)')
+    adm_type_ticket = (By.CSS_SELECTOR, '#supporttickets-type_id:nth-child(2)')
+    adm_message_theme = (By.CSS_SELECTOR, '#supporttickets-topic:nth-child(2)')
+    adm_message_ticket = (By.CSS_SELECTOR, '#supporttickets-message:nth-child(2)')
+    adm_send_message = (By.CSS_SELECTOR, '#supportTicketsForm > div:nth-child(6) > button')
