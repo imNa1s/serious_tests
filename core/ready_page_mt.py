@@ -1,8 +1,8 @@
 import time
 
 from core.links import SiteLinks
-from core.login_page import LoginPage
-from core.partner_page import GoToPartnerPage, PartnerNavBorder, PartnerCreateSource, PartnerCreateStream, PartnerTicketsMt
+from core.Page_methods.login_page import LoginPage
+from core.Page_methods.partner_page import GoToPartnerPage, PartnerNavBorder, PartnerCreateSource, PartnerCreateStream
 
 
 class BrowserMt:
