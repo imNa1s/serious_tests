@@ -6,7 +6,7 @@ from core.locators import PartnerLocators, StreamLocators, TicketLocators
 from core.statistic.main_statistic_base import StatsMt
 
 
-class GoToPartnerPage(BaseMt, PartnerLocators):
+class GoToPartnerPage(BaseMt):
     def partner_button(self):
         assert self.is_element_present(*PartnerLocators.partner_button), 'can\'t find button partner'
         self.find_el_click(*PartnerLocators.partner_button)
@@ -21,7 +21,7 @@ class GoToPartnerPage(BaseMt, PartnerLocators):
         self.switch_to_new_win()
 
 
-class PartnerNavBorder(BaseMt, PartnerLocators):
+class PartnerNavBorder(BaseMt):
     def partner_settings(self):
         assert self.is_element_present(*PartnerLocators.partner_settings), 'can\'t find button settings'
         self.find_el_click(*PartnerLocators.partner_settings)
@@ -39,7 +39,7 @@ class PartnerNavBorder(BaseMt, PartnerLocators):
         self.find_el_click(*PartnerLocators.partner_tickets)
 
 
-class PartnerCreateSource(BaseMt, PartnerLocators):
+class PartnerCreateSource(BaseMt):
     def partner_source_create(self):
         assert self.is_element_present(*PartnerLocators.create_source), 'can\'t find button create source'
         self.find_el_click(*PartnerLocators.create_source)
@@ -63,7 +63,7 @@ class PartnerCreateSource(BaseMt, PartnerLocators):
         self.find_el_click(*PartnerLocators.create_source_button)
 
 
-class PartnerCreateStream(BaseMt, PartnerLocators):
+class PartnerCreateStream(BaseMt):
     def partner_stream_create(self):
         assert self.is_element_present(*StreamLocators.create_stream), 'can\'t find button create stream'
         self.find_el_click(*StreamLocators.create_stream)
@@ -145,7 +145,7 @@ class PartnerCreateStream(BaseMt, PartnerLocators):
         self.find_el_click(*StreamLocators.create_stream_btn)
 
 
-class PartnerTicketsMt(StatsMt, StreamLocators):
+class PartnerTicketsMt(StatsMt):
     def ticket_create(self):
         assert self.is_element_present(*TicketLocators.create_button_ticket), 'can\'t find button create ticket'
         self.find_el_click(*TicketLocators.create_button_ticket)
@@ -167,10 +167,47 @@ class PartnerTicketsMt(StatsMt, StreamLocators):
         assert self.is_element_present(*TicketLocators.btn_send_ticket), 'can\'t find button send ticket'
         self.find_el_click(*TicketLocators.btn_send_ticket)
 
-    def see_alert(self):
-        assert self.is_element_present(*TicketLocators.alert_ticket_icon), 'no field alerts'
-        how_much = self.browser.find_element(*TicketLocators.alert_ticket_icon)
+    def see_adm_alert(self):
+        assert self.is_element_present(*TicketLocators.alert_adm_ticket_icon), 'no field alerts'
+        how_much = self.browser.find_element(*TicketLocators.alert_adm_ticket_icon)
         return how_much.text
+
+    def adm_ticket_send_button(self):
+        assert self.is_element_present(*PartnerLocators.test_settings), 'can\'t find button "settings"'
+        self.find_el_click(*PartnerLocators.test_settings)
+        assert self.is_element_present(*TicketLocators.adm_send_ticket_btn), 'can\'t find button "send ticket"'
+        self.find_el_click(*TicketLocators.adm_send_ticket_btn)
+
+    def adm_ticket_type_choice(self):
+        assert self.is_element_present(*TicketLocators.adm_type_ticket), 'can\'t find type'
+        select = Select(self.browser.find_element(*TicketLocators.adm_type_ticket))
+        select.select_by_value('1')
+
+    def adm_ticket_theme(self):
+        assert self.is_element_present(*TicketLocators.adm_message_theme), 'can\'t find field theme'
+        self.find_el_write(*TicketLocators.adm_message_theme, 'autotest')
+
+    def adm_ticket_message(self):
+        assert self.is_element_present(*TicketLocators.adm_message_ticket), 'can\'t find field message'
+        self.find_el_write(*TicketLocators.adm_message_ticket, 'some text for test')
+
+    def adm_ticket_send_message_button(self):
+        assert self.is_element_present(*TicketLocators.adm_send_message), 'can\'t find button to send'
+        self.find_el_click(*TicketLocators.adm_send_message)
+
+    def see_partner_alert(self):
+        assert self.is_element_present(*PartnerLocators.partner_alert), 'can\'t find field alert'
+        how_much = self.browser.find_element(*PartnerLocators.partner_alert)
+        return how_much.text
+
+    def partner_alert_button(self):
+        assert self.is_element_present(*PartnerLocators.partner_alert_button), 'can\'t find button partner alert'
+        self.find_el_click(*PartnerLocators.partner_alert_button)
+
+    def partner_alert_header_text(self):
+        assert self.is_element_present(*TicketLocators.ticket_header), 'can\'t find field alert'
+        header = self.browser.find_element(*TicketLocators.ticket_header)
+        return header.text
 
 
 class PartnerHelpMt(StatsMt, PartnerLocators):
