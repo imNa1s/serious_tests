@@ -28,6 +28,8 @@ class PartnerLocators:
     source_name = (By.CSS_SELECTOR, '#name')
     source_url = (By.CSS_SELECTOR, '#url')
     create_source_button = (By.CSS_SELECTOR, 'button.btn.primary.p-x-md')
+    partner_alert_button = (By.CSS_SELECTOR, 'div.navbar.ng-scope > ul > li.nav-item.pos-stc-xs > a')
+    partner_alert = (By.CSS_SELECTOR, 'ul > li.nav-item.pos-stc-xs > a > span')
 
 
 class StreamLocators:
@@ -66,9 +68,10 @@ class TicketLocators:
     ticket_message_type = (By.CSS_SELECTOR, '#topic')
     ticket_message = (By.CSS_SELECTOR, '#message')
     btn_send_ticket = (By.CSS_SELECTOR, 'div.modal-footer > button.btn.primary.p-x-md')
-    alert_ticket_icon = (By.CSS_SELECTOR, '#main-menu > li:nth-child(6) > a > i > b')
+    alert_adm_ticket_icon = (By.CSS_SELECTOR, '#main-menu > li:nth-child(6) > a > i > b')
     adm_send_ticket_btn = (By.CSS_SELECTOR, 'li.nav-item.dropdown.open > div > a:nth-child(4)')
     adm_type_ticket = (By.CSS_SELECTOR, '#supporttickets-type_id:nth-child(2)')
     adm_message_theme = (By.CSS_SELECTOR, '#supporttickets-topic:nth-child(2)')
     adm_message_ticket = (By.CSS_SELECTOR, '#supporttickets-message:nth-child(2)')
     adm_send_message = (By.CSS_SELECTOR, '#supportTicketsForm > div:nth-child(6) > button')
+    ticket_header = (By.CSS_SELECTOR, 'div:nth-child(1) > div > div.text-sm.ng-binding > b')
