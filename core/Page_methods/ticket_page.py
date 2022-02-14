@@ -1,6 +1,4 @@
-import time
-
-from core.partner_page import PartnerNavBorder, PartnerTicketsMt, GoToPartnerPage
+from core.Page_methods.partner_page import PartnerNavBorder, PartnerTicketsMt, GoToPartnerPage
 
 
 class TicketMt():
