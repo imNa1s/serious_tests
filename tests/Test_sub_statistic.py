@@ -128,7 +128,7 @@ def test_system(browser):
 
 @pytest.mark.sub_stats
 @pytest.mark.all_pay
-def test_buyout(browser):
+def test_all_pay(browser):
     link = SiteLinks.login_link_test1
     BrowserMt.login_pass(browser, link)
     SubStatisticsMt.sub_stats_date(browser, browser.current_url)
