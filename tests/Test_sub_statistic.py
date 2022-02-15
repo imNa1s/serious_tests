@@ -47,6 +47,16 @@ def test_unsub(browser):
 
 
 @pytest.mark.sub_stats
+@pytest.mark.unsub_1st_30min
+def test_unsub_1st_30min(browser):
+    link = SiteLinks.login_link_test1
+    BrowserMt.login_pass(browser, link)
+    SubStatisticsMt.sub_stats_date(browser, browser.current_url)
+    SubStatisticsMt.sub_stats_unsub_1st_30min(browser, browser.current_url)
+    time.sleep(1)
+
+
+@pytest.mark.sub_stats
 @pytest.mark.unsub_1st
 def test_unsub_1st(browser):
     link = SiteLinks.login_link_test1
