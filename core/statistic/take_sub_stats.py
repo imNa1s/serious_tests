@@ -46,6 +46,18 @@ class SubStatisticsMt:
         print(f'\nnumber of unsub before request {stats_pars1}, after request {stats_pars2}')
         assert stats_pars1 != stats_pars2, 'unsub without change'
 
+    def sub_stats_unsub_1st_30min(self, link):
+        Page = TakeSubStatsMt(self, link)
+        stats = Page.save_stats()
+        stats_pars1 = Page.unsub_1st_30min_take(stats)
+        SubscribeMt.sub_off(LinksReqTds.tds_click_test)
+        time.sleep(60)
+        Page.ref()
+        stats = Page.save_stats()
+        stats_pars2 = Page.unsub_1st_30min_take(stats)
+        print(f'\nnumber of unsub in 1st day {stats_pars1}, after request {stats_pars2}')
+        assert stats_pars1 != stats_pars2, 'unsub in 1st day without change'
+
     def sub_stats_unsub_1st(self, link):
         Page = TakeSubStatsMt(self, link)
         stats = Page.save_stats()
@@ -75,10 +87,10 @@ class SubStatisticsMt:
         stats = Page.save_stats()
         sub = Page.sub_take(stats)
         rebill = Page.sub_rebill_take(stats)
-        on_abonent = int(rebill)/int(sub)
+        abonent = int(rebill)/int(sub)
+        abonent = round(abonent, 2)
         rebill_on = Page.rebill_on_abonent_take(stats)
-        print(f'\nnumber of rebill abonent {on_abonent}, {rebill_on}')
-        assert str(on_abonent) == rebill_on, f'they not equal {on_abonent}, {rebill_on}'
+        assert abonent == rebill_on, f'they not equal {abonent}, {rebill_on}'
 
     def sub_stats_price(self, link):
         Page = TakeSubStatsMt(self, link)
@@ -90,7 +102,7 @@ class SubStatisticsMt:
         Page = TakeSubStatsMt(self, link)
         stats = Page.save_stats()
         stats_pars1 = Page.sub_buyout_take(stats)
-        print(f'\nnumber of buyout{stats_pars1}')
+        print(f'\nnumber of buyout {stats_pars1}')
 
     def sub_stats_rebill_buyout(self, link):
         Page = TakeSubStatsMt(self, link)
