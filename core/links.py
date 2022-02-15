@@ -7,6 +7,7 @@ class LinksReqTds:
                'stream_id}&landing_id={landing_id}&operator={operator}'
     tds_click_test2 = 'http://test2.clicktds.ru/__tGIG5qcK?debug_operator_id=1&tds_no_redirect=1'
     tds_click_test2_buy = 'http://test2.clicktds.ru/Z3bvoiDNcm?debug_operator_id=1&tds_no_redirect=1'
+    tds_js_check = 'http://test1.clicktds.ru/site/js?id=CX1wS_0-qf&operator-id=2&country-id=1'
 
 
 
