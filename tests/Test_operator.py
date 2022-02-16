@@ -1,6 +1,6 @@
 from core.links import SiteLinks
-from core.Page_methods.operator_ready_mt import OperatorReadyMt
-from core.ready_page_mt import BrowserMt
+from core.page_methods.operator_ready_mt import OperatorReadyMt
+from core.page_methods.ready_pages_mt import BrowserMt
 
 
 def test_js(browser):

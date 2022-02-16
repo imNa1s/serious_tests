@@ -1,7 +1,7 @@
 import time
 
-from core.Page_methods.partner_page import PartnerNavBorder
-from core.Page_methods.stream_page import PartnerCreateStream
+from core.page_methods.partner_page import PartnerNavBorder
+from core.page_methods.stream_page import PartnerCreateStream
 
 
 class StreamReadyMt:

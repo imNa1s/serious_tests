@@ -3,7 +3,7 @@ import time
 import pytest
 
 from core.links import SiteLinks
-from core.ready_page_mt import BrowserMt
+from core.page_methods.ready_pages_mt import BrowserMt
 from core.statistic.take_sub_stats import SubStatisticsMt
 
 

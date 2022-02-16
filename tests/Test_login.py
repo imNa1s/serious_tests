@@ -2,9 +2,9 @@ import time
 import pytest
 
 from core.links import SiteLinks
-from core.Page_methods.login_page import LoginPage
-from core.Page_methods.partner_page import GoToPartnerPage
-from core.ready_page_mt import BrowserMt
+from core.page_methods.login_page import LoginPage
+from core.page_methods.partner_page import GoToPartnerPage
+from core.page_methods.ready_pages_mt import BrowserMt
 
 
 @pytest.mark.login

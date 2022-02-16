@@ -1,6 +1,6 @@
 import time
 
-from core.Page_methods.operator_page import OperatorMT
+from core.page_methods.operator_page import OperatorMT
 
 
 class OperatorReadyMt:

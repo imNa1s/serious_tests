@@ -1,8 +1,8 @@
 import pytest
 
-from core.Page_methods.source_ready_mt import SourceReadyMt
+from core.page_methods.source_ready_mt import SourceReadyMt
 from core.links import SiteLinks
-from core.ready_page_mt import BrowserMt
+from core.page_methods.ready_pages_mt import BrowserMt
 
 
 @pytest.mark.create

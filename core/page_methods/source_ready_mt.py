@@ -1,5 +1,5 @@
-from core.Page_methods.partner_page import PartnerNavBorder
-from core.Page_methods.source_page import PartnerCreateSource
+from core.page_methods.partner_page import PartnerNavBorder
+from core.page_methods.source_page import PartnerCreateSource
 
 
 class SourceReadyMt:

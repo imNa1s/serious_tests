@@ -1,8 +1,8 @@
 import pytest
 
 from core.links import SiteLinks
-from core.Page_methods.ticket_ready_mt import TicketMt
-from core.ready_page_mt import BrowserMt
+from core.page_methods.ticket_ready_mt import TicketMt
+from core.page_methods.ready_pages_mt import BrowserMt
 
 
 @pytest.mark.test1

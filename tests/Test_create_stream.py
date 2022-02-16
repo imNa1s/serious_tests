@@ -1,8 +1,8 @@
 import pytest
 
-from core.Page_methods.stream_ready_mt import StreamReadyMt
+from core.page_methods.stream_ready_mt import StreamReadyMt
 from core.links import SiteLinks, LinksToCheck
-from core.ready_page_mt import BrowserMt
+from core.page_methods.ready_pages_mt import BrowserMt
 
 
 @pytest.mark.create
