@@ -23,16 +23,6 @@ class BrowserMt:
         Page.testmail_parnter()
         Page.testmail_autorization()
 
-    def create_source(self, link):
-        Page = PartnerNavBorder(self, link)
-        Page.partner_source()
-        Page = PartnerCreateSource(self, link)
-        Page.partner_source_create()
-        Page.type_source()
-        Page.source_name()
-        Page.source_url()
-        Page.create_source_button()
-
     def create_stream(self, link):
         Page = PartnerNavBorder(self, link)
         Page.partner_stream()
