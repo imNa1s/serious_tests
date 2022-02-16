@@ -21,5 +21,5 @@ class StreamReadyMt:
         Page.landing_mts()
         Page.choice_iplayer()
         Page.add_land_button()
-        # Page.stream_create_button()
+        Page.stream_create_button()
         time.sleep(2)
