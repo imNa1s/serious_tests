@@ -75,3 +75,13 @@ class TicketLocators:
     adm_message_ticket = (By.CSS_SELECTOR, '#supporttickets-message:nth-child(2)')
     adm_send_message = (By.CSS_SELECTOR, '#supportTicketsForm > div:nth-child(6) > button')
     ticket_header = (By.CSS_SELECTOR, 'div:nth-child(1) > div > div.text-sm.ng-binding > b')
+
+class OperatorLocators:
+    operator = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(3)')
+    operator_create = (By.CSS_SELECTOR, '#view > div > div.m-b > a:nth-child(1)')
+    operator_name = (By.CSS_SELECTOR, '#operators-name:nth-child(2)')
+    operator_subnet = (By.CSS_SELECTOR, '#operators-subnet:nth-child(2)')
+    opeartor_denied_devices = (By.CSS_SELECTOR, '#operators-deny_devices:nth-child(2)')
+    operator_country = (By.CSS_SELECTOR, '#operators-country_id:nth-child(2)')
+    operator_on = (By.CSS_SELECTOR, '#operators-status:nth-child(2)')
+    operator_create_button = (By.CSS_SELECTOR, '#operatorForm > div:nth-child(8) > button')
