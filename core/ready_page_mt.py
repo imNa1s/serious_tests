@@ -2,7 +2,7 @@ import time
 
 from core.links import SiteLinks
 from core.Page_methods.login_page import LoginPage
-from core.Page_methods.partner_page import GoToPartnerPage, PartnerNavBorder, PartnerCreateSource, PartnerCreateStream
+from core.Page_methods.partner_page import GoToPartnerPage, PartnerNavBorder, PartnerCreateStream
 
 
 class BrowserMt:
