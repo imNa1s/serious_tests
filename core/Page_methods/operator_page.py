@@ -6,6 +6,8 @@ from core.locators import OperatorLocators
 
 class OperatorMT(BaseMt):
     def operator_page_open(self):
+        assert self.is_element_present(*OperatorLocators.landing_menu), 'can\'t find landing'
+        self.find_el_click(*OperatorLocators.landing_menu)
         assert self.is_element_present(*OperatorLocators.operator), 'can\'t find button operators'
         self.find_el_click(*OperatorLocators.operator)
 
@@ -19,11 +21,11 @@ class OperatorMT(BaseMt):
 
     def operator_subnet(self):
         assert self.is_element_present(*OperatorLocators.operator_subnet), 'can\'t find field to write subnet'
-        self.find_el_write(*OperatorLocators.operator_subnet)
+        self.find_el_write(*OperatorLocators.operator_subnet, '94.41.230.0/22')
 
     def operator_denied_devices(self):
         assert self.is_element_present(*OperatorLocators.opeartor_denied_devices), 'can\'t find field denied devices'
-        self.find_el_write(*OperatorLocators.opeartor_denied_devices, 'samsung galaxy s')
+        self.find_el_write(*OperatorLocators.opeartor_denied_devices, '{"desktop":true}')
 
     def operator_country(self):
         assert self.is_element_present(*OperatorLocators.operator_country), 'can\'t find country selector'
