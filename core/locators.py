@@ -84,4 +84,5 @@ class OperatorLocators:
     opeartor_denied_devices = (By.CSS_SELECTOR, '#operators-deny_devices:nth-child(2)')
     operator_country = (By.CSS_SELECTOR, '#operators-country_id:nth-child(2)')
     operator_on = (By.CSS_SELECTOR, '#operators-status:nth-child(2)')
+    operator_web = (By.CSS_SELECTOR, '#operators-is_web:nth-child(2)')
     operator_create_button = (By.CSS_SELECTOR, '#operatorForm > div:nth-child(8) > button')
