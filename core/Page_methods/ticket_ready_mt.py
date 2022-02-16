@@ -1,4 +1,5 @@
-from core.Page_methods.partner_page import PartnerNavBorder, PartnerTicketsMt, GoToPartnerPage
+from core.Page_methods.partner_page import PartnerNavBorder, GoToPartnerPage
+from core.Page_methods.ticket_page import PartnerTicketsMt
 
 
 class TicketMt:
