@@ -2,7 +2,7 @@ import time
 
 from core.links import SiteLinks
 from core.Page_methods.login_page import LoginPage
-from core.Page_methods.partner_page import GoToPartnerPage, PartnerNavBorder, PartnerCreateStream
+from core.Page_methods.partner_page import GoToPartnerPage
 
 
 class BrowserMt:
@@ -22,22 +22,3 @@ class BrowserMt:
         Page.partner_button()
         Page.testmail_parnter()
         Page.testmail_autorization()
-
-    def create_stream(self, link):
-        Page = PartnerNavBorder(self, link)
-        Page.partner_stream()
-        Page = PartnerCreateStream(self, link)
-        Page.partner_stream_create()
-        Page.partner_stream_name()
-        Page.stream_source()
-        Page.stream_traffback_url()
-        Page.stream_postback()
-        Page.postback_actions_all()
-        Page.type_stream_redirect()
-        Page.landing_page_display()
-        Page.ya_redirect_ban()
-        Page.landing_mts()
-        Page.choice_iplayer()
-        Page.add_land_button()
-        Page.stream_create_button()
-        time.sleep(2)
