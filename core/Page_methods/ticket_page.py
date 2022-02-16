@@ -1,7 +1,7 @@
 from core.Page_methods.partner_page import PartnerNavBorder, PartnerTicketsMt, GoToPartnerPage
 
 
-class TicketMt():
+class TicketMt:
     def create_tiket(self, link):
         Page = PartnerNavBorder(self, link)
         Page.partner_tickets()
