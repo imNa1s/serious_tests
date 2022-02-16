@@ -1,6 +1,6 @@
-import time
 import pytest
 
+from core.Page_methods.source_ready_mt import SourceReadyMt
 from core.links import SiteLinks
 from core.ready_page_mt import BrowserMt
 
@@ -11,4 +11,4 @@ def test_create_source(browser):
     link = SiteLinks.login_link_test1
     BrowserMt.login_pass(browser, link)
     BrowserMt.partner_redirect(browser, link)
-    BrowserMt.create_source(browser, link)
+    SourceReadyMt.create_source(browser, link)
