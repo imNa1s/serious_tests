@@ -16,7 +16,11 @@ class StatsLocators:
 
 class AdmSideBarLocators:
     landing_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7)')
+    lp_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(1)')
+    top_landing_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(2)')
+    operator_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(3)')
     category_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(4)')
+    country_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(5)')
 
 
 class PartnerLocators:
@@ -83,7 +87,6 @@ class TicketLocators:
 
 
 class OperatorLocators:
-    operator = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(3)')
     operator_create = (By.CSS_SELECTOR, '#view > div > div.m-b > a:nth-child(1)')
     operator_name = (By.CSS_SELECTOR, '#operators-name:nth-child(2)')
     operator_subnet = (By.CSS_SELECTOR, '#operators-subnet:nth-child(2)')
@@ -99,3 +102,10 @@ class CategoryLocators:
     category_name = (By.CSS_SELECTOR, '#categories-name:nth-child(2)')
     category_status = (By.CSS_SELECTOR, '#categories-status:nth-child(1)')
     category_save_button = (By.CSS_SELECTOR, '#categoryForm > div:nth-child(4) > button')
+
+
+class CountryLocators:
+    country_add = (By.CSS_SELECTOR, 'div.btn-toolbar.kv-grid-toolbar.toolbar-container.pull-right > a')
+    country_name = (By.CSS_SELECTOR, '#countries-name:nth-child(2)')
+    country_iso = (By.CSS_SELECTOR, '#countries-iso:nth-child(2)')
+    country_save_button = (By.CSS_SELECTOR, '#countryForm > div:nth-child(4) > button')
