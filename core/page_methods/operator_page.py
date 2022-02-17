@@ -8,8 +8,8 @@ class OperatorMT(BaseMt):
     def operator_page_open(self):
         assert self.is_element_present(*AdmSideBarLocators.landing_menu), 'can\'t find landing'
         self.find_el_click(*AdmSideBarLocators.landing_menu)
-        assert self.is_element_present(*OperatorLocators.operator), 'can\'t find button operators'
-        self.find_el_click(*OperatorLocators.operator)
+        assert self.is_element_present(*AdmSideBarLocators.operator_menu), 'can\'t find button operators'
+        self.find_el_click(*AdmSideBarLocators.operator_menu)
 
     def operator_create_button(self):
         assert self.is_element_present(*OperatorLocators.operator_create), 'can\'t find button create operator'
