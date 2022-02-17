@@ -1,13 +1,13 @@
 from selenium.webdriver.support.ui import Select
 
 from core.core_mt import BaseMt
-from core.locators import OperatorLocators
+from core.locators import OperatorLocators, AdmSideBarLocators
 
 
 class OperatorMT(BaseMt):
     def operator_page_open(self):
-        assert self.is_element_present(*OperatorLocators.landing_menu), 'can\'t find landing'
-        self.find_el_click(*OperatorLocators.landing_menu)
+        assert self.is_element_present(*AdmSideBarLocators.landing_menu), 'can\'t find landing'
+        self.find_el_click(*AdmSideBarLocators.landing_menu)
         assert self.is_element_present(*OperatorLocators.operator), 'can\'t find button operators'
         self.find_el_click(*OperatorLocators.operator)
 
@@ -24,8 +24,8 @@ class OperatorMT(BaseMt):
         self.find_el_write(*OperatorLocators.operator_subnet, '94.41.230.0/22')
 
     def operator_denied_devices(self):
-        assert self.is_element_present(*OperatorLocators.opeartor_denied_devices), 'can\'t find field denied devices'
-        self.find_el_write(*OperatorLocators.opeartor_denied_devices, '{"desktop":true}')
+        assert self.is_element_present(*OperatorLocators.operator_denied_devices), 'can\'t find field denied devices'
+        self.find_el_write(*OperatorLocators.operator_denied_devices, '{"desktop":true}')
 
     def operator_country(self):
         assert self.is_element_present(*OperatorLocators.operator_country), 'can\'t find country selector'
