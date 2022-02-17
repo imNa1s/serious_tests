@@ -16,7 +16,7 @@ class StatsLocators:
 
 class AdmSideBarLocators:
     landing_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7)')
-    category_button = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(3)')
+    category_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(7) > ul > li:nth-child(3)')
 
 
 class PartnerLocators:
