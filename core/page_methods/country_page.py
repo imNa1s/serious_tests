@@ -12,7 +12,7 @@ class CountryMt(BaseMt):
 
     def country_create_button(self):
         assert self.is_element_present(*CountryLocators.country_add), 'can\'t find button create country'
-        self.find_el_click(CountryLocators.country_add)
+        self.find_el_click(*CountryLocators.country_add)
 
     def country_name(self):
         assert self.is_element_present(*CountryLocators.country_name), 'can\'t find field name'
