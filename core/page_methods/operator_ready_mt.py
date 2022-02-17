@@ -1,5 +1,4 @@
 
-
 from core.page_methods.operator_page import OperatorMT
 
 
