@@ -1,10 +1,10 @@
-import time
+
 
 from core.page_methods.operator_page import OperatorMT
 
 
 class OperatorReadyMt:
-    def opeartor_create(self, link):
+    def operator_create(self, link):
         Page = OperatorMT(self, link)
         Page.operator_page_open()
         Page.operator_create_button()

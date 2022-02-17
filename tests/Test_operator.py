@@ -6,4 +6,4 @@ from core.page_methods.ready_pages_mt import BrowserMt
 def test_js(browser):
     link = SiteLinks.login_link_test1
     BrowserMt.login_pass(browser, link)
-    OperatorReadyMt.opeartor_create(browser, link)
+    OperatorReadyMt.operator_create(browser, link)
