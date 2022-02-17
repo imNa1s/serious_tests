@@ -22,4 +22,6 @@ class CountryMt(BaseMt):
         assert self.is_element_present(*CountryLocators.country_iso), 'can\'t find field ISO'
         self.find_el_write(*CountryLocators.country_iso, 'AUTO')
 
-    
+    def country_create_end_button(self):
+        assert self.is_element_present(*CountryLocators.country_save_button), 'can\'t find button save'
+        self.find_el_click(*CountryLocators.country_save_button)
