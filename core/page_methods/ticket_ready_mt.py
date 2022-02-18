@@ -1,5 +1,5 @@
 from core.page_methods.partner_page import PartnerNavBorder, GoToPartnerPage, AdmPartnerPage
-from core.page_methods.ticket_page import PartnerTicketsMt
+from core.page_methods.ticket_page import PartnerTicketsMt, AdmTicketsPage
 
 
 class TicketMt:
@@ -26,7 +26,7 @@ class TicketMt:
         Page = GoToPartnerPage(self, link)
         Page.testmail_parnter()
         Page.testmail_autorization()
-        Page = PartnerTicketsMt(self, link)
+        Page = AdmTicketsPage(self, link)
         alert_icon_before = Page.see_partner_alert()
         Page.switch_to_old_win()
         Page.adm_ticket_send_button()
