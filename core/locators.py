@@ -40,7 +40,7 @@ class AdmSideBarLocators:
     news_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(9)')
     rates_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(10)')
     mk_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(11)')
-    rates_services = (By.CSS_SELECTOR, '#main-menu > li:nth-child(11) > ul > li:nth-child(1)')
+    rates_services_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(11) > ul > li:nth-child(1)')
     modules_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(12)')
     sub_limits_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(12) > ul > li:nth-child(1)')
     general_limits_menu = (By.CSS_SELECTOR, '#main-menu > li:nth-child(12) > ul > li:nth-child(2)')
