@@ -5,10 +5,10 @@ from core.links import LinksReqTds
 from core.locators import StreamLocators, AdmSideBarLocators
 
 
-class AdmPartnerPage(BaseMt):
-    def partner_page_open(self):
-        assert self.is_element_present(*AdmSideBarLocators.partner_menu), 'can\'t find button partner'
-        self.find_el_click(*AdmSideBarLocators.partner_menu)
+class AdmStreamPage(BaseMt):
+    def stream_page_open(self):
+        assert self.is_element_present(*AdmSideBarLocators.streams_menu), 'can\'t find button streams'
+        self.find_el_click(*AdmSideBarLocators.streams_menu)
 
 
 class PartnerCreateStream(BaseMt):
