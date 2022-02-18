@@ -2,7 +2,7 @@ from core.core_mt import BaseMt
 from core.locators import AdmSideBarLocators
 
 
-class AdmLandingPage(BaseMt):
+class AdmOrdersPage(BaseMt):
     def orders_page_open(self):
         assert self.is_element_present(*AdmSideBarLocators.payments_menu), 'can\'t find button "payments"'
         self.find_el_click(*AdmSideBarLocators.payments_menu)
