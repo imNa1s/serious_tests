@@ -1,7 +1,13 @@
 from selenium.webdriver.support.ui import Select
 
 from core.core_mt import BaseMt
-from core.locators import PartnerLocators
+from core.locators import PartnerLocators, AdmSideBarLocators
+
+
+class SourcePage(BaseMt):
+    def source_page_open(self):
+        assert self.is_element_present(*AdmSideBarLocators.source_menu), 'can\'t find button source'
+        self.find_el_click(*AdmSideBarLocators.source_menu)
 
 
 class PartnerCreateSource(BaseMt):
