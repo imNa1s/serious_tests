@@ -2,7 +2,13 @@ from selenium.webdriver.support.ui import Select
 
 from core.core_mt import BaseMt
 from core.links import LinksReqTds
-from core.locators import StreamLocators
+from core.locators import StreamLocators, AdmSideBarLocators
+
+
+class AdmPartnerPage(BaseMt):
+    def partner_page_open(self):
+        assert self.is_element_present(*AdmSideBarLocators.partner_menu), 'can\'t find button partner'
+        self.find_el_click(*AdmSideBarLocators.partner_menu)
 
 
 class PartnerCreateStream(BaseMt):
