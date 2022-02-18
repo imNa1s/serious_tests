@@ -1,13 +1,15 @@
 from core.core_mt import BaseMt
-from core.locators import PartnerLocators, StreamLocators
+from core.locators import PartnerLocators, StreamLocators, AdmSideBarLocators
 from core.statistic.main_statistic_base import StatsMt
 
 
-class GoToPartnerPage(BaseMt):
-    def partner_button(self):
-        assert self.is_element_present(*PartnerLocators.partner_button), 'can\'t find button partner'
-        self.find_el_click(*PartnerLocators.partner_button)
+class AdmPartnerPage(BaseMt):
+    def partner_page_open(self):
+        assert self.is_element_present(*AdmSideBarLocators.partner_menu), 'can\'t find button partner'
+        self.find_el_click(*AdmSideBarLocators.partner_menu)
 
+
+class GoToPartnerPage(BaseMt):
     def testmail_parnter(self):
         assert self.is_element_present(*PartnerLocators.test_partner), 'can\'t find test partner'
         self.find_el_click(*PartnerLocators.test_partner)
