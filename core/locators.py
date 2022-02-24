@@ -154,3 +154,23 @@ class CountryLocators:
     country_name = (By.CSS_SELECTOR, '#countries-name:nth-child(2)')
     country_iso = (By.CSS_SELECTOR, '#countries-iso:nth-child(2)')
     country_save_button = (By.CSS_SELECTOR, '#countryForm > div:nth-child(4) > button')
+
+
+class LandingLocators:
+    landing_add = (By.CSS_SELECTOR, '#view > div > div.m-b > a:nth-child(1)')
+    landing_add_name = (By.CSS_SELECTOR, '#landings-name:nth-child(2)')
+    landing_add_web = (By.CSS_SELECTOR, '#landings-is_web:nth-child(1)')
+    landing_add_provider = (By.CSS_SELECTOR, '#landings-provider_name:nth-child(2)')
+    landing_add_url = (By.CSS_SELECTOR, '#landingForm > div.form-group.provider-params > input')
+    landing_add_operator = (By.CSS_SELECTOR, 'span.select2.select2-container.select2-container--krajee.select2'
+                                             '-container--below > span.selection > span > ul > li > input')
+    landing_add_ruwifi = (By.CSS_SELECTOR, 'span > ul > li.select2-selection__choice')
+    landing_add_category = (By.CSS_SELECTOR, '#landings-category_id:nth-child(2)')
+    landing_add_type = (By.CSS_SELECTOR, '#landings-subscribe_type_id:nth-child(2)')
+    landing_add_write_off = (By.CSS_SELECTOR, '#landings-writeoff:nth-child(2)')
+    landing_add_static_write_off = (By.CSS_SELECTOR, '#landings-royalties:nth-child(2)')
+    landing_add_partner_payments = (By.CSS_SELECTOR, '#landings-partner_deductions:nth-child(2)')
+    landing_add_price = (By.CSS_SELECTOR, '#landings-purchase_price:nth-child(2)')
+    landing_add_landing_on = (By.CSS_SELECTOR, '#landings-status:nth-child(1)')
+    landing_add_save = (By.CSS_SELECTOR, '#landingForm > div:nth-child(29) > button')
+    landing_add_static_pays = (By.CSS_SELECTOR, '#landings-static_deductions:nth-child(1)')
