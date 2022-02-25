@@ -162,9 +162,7 @@ class LandingLocators:
     landing_add_web = (By.CSS_SELECTOR, '#landings-is_web:nth-child(1)')
     landing_add_provider = (By.CSS_SELECTOR, '#landings-provider_name:nth-child(2)')
     landing_add_url = (By.CSS_SELECTOR, '#landingForm > div.form-group.provider-params > input')
-    landing_add_operator = (By.CSS_SELECTOR, 'span.select2.select2-container.select2-container--krajee.select2'
-                                             '-container--below > span.selection > span > ul > li > input')
-    landing_add_ruwifi = (By.CSS_SELECTOR, 'span > ul > li.select2-selection__choice')
+    landing_add_operator = (By.CSS_SELECTOR, '#landings-selectedoperators')
     landing_add_category = (By.CSS_SELECTOR, '#landings-category_id:nth-child(2)')
     landing_add_type = (By.CSS_SELECTOR, '#landings-subscribe_type_id:nth-child(2)')
     landing_add_write_off = (By.CSS_SELECTOR, '#landings-writeoff:nth-child(2)')

@@ -17,11 +17,11 @@ class AdmLandingPage(BaseMt):
 
     def create_landing_name(self):
         assert self.is_element_present(*LandingLocators.landing_add_name), 'can\'t find field for name'
-        self.find_el_click(*LandingLocators.landing_add_name)
+        self.find_el_write(*LandingLocators.landing_add_name, 'autotest')
 
     def create_landing_provider(self):
         assert self.is_element_present(*LandingLocators.landing_add_provider), 'can\'t find selector provider'
-        select = Select(self.browser.find_elemrnt(*LandingLocators.landing_add_provider))
+        select = Select(self.browser.find_element(*LandingLocators.landing_add_provider))
         select.select_by_value("Mobbilling")
 
     def create_landing_url(self):
@@ -30,18 +30,17 @@ class AdmLandingPage(BaseMt):
 
     def create_landing_operator(self):
         assert self.is_element_present(*LandingLocators.landing_add_operator), 'can\'t find select operator'
-        self.find_el_click(*LandingLocators.landing_add_operator)
-        assert self.is_element_present(*LandingLocators.landing_add_ruwifi), 'can\'t find operator ruwifi'
-        self.find_el_click(*LandingLocators.landing_add_ruwifi)
+        select = Select(self.browser.find_element(*LandingLocators.landing_add_operator))
+        select.select_by_value("26")
 
     def create_landing_category(self):
         assert self.is_element_present(*LandingLocators.landing_add_category), 'can\'t find selector category'
-        select = Select(self.browser.find_elemrnt(*LandingLocators.landing_add_category))
+        select = Select(self.browser.find_element(*LandingLocators.landing_add_category))
         select.select_by_value("8")
 
     def create_landing_type(self):
         assert self.is_element_present(*LandingLocators.landing_add_type), 'can\'t find selector type'
-        select = Select(self.browser.find_elemrnt(*LandingLocators.landing_add_category))
+        select = Select(self.browser.find_element(*LandingLocators.landing_add_category))
         select.select_by_value("1")
 
     def create_landing_static_pays(self):
