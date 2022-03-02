@@ -30,8 +30,7 @@ class AdmLandingPage(BaseMt):
 
     def create_landing_operator(self):
         assert self.is_element_present(*LandingLocators.landing_add_operator), 'can\'t find select operator'
-        select = Select(self.browser.find_element(*LandingLocators.landing_add_operator))
-        select.select_by_value("26")
+        self.find_el_write(*LandingLocators.landing_add_operator, 'RUWIFI')
 
     def create_landing_category(self):
         assert self.is_element_present(*LandingLocators.landing_add_category), 'can\'t find selector category'
@@ -40,7 +39,7 @@ class AdmLandingPage(BaseMt):
 
     def create_landing_type(self):
         assert self.is_element_present(*LandingLocators.landing_add_type), 'can\'t find selector type'
-        select = Select(self.browser.find_element(*LandingLocators.landing_add_category))
+        select = Select(self.browser.find_element(*LandingLocators.landing_add_type))
         select.select_by_value("1")
 
     def create_landing_static_pays(self):
