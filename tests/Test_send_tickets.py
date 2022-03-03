@@ -7,7 +7,7 @@ from core.page_methods.ready_pages_mt import BrowserMt
 
 @pytest.mark.test1
 @pytest.mark.ticket
-@pytest.mark.alert
+@pytest.mark.partner
 def test_ticket_alert_admin(browser):
     link = SiteLinks.login_link_test1
     BrowserMt.login_pass(browser, link)
@@ -17,7 +17,7 @@ def test_ticket_alert_admin(browser):
 
 @pytest.mark.test1
 @pytest.mark.ticket
-@pytest.mark.alert
+@pytest.mark.admin
 def test_ticket_alert_partner(browser):
     link = SiteLinks.login_link_test1
     BrowserMt.login_pass(browser, link)
