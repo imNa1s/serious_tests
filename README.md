@@ -18,7 +18,7 @@ To run this project, install package to yours IDE or server
 
 ###### Установка Python3
 
-Втерминале по очерёдно введём команды
+В терминале по очерёдно введём команды
 
 sudo su.
 _______________
