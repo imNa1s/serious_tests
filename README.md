@@ -16,7 +16,9 @@ To run this project, install package to yours IDE or server
 
 ##### server (ubuntu 64bit, quad core, 4gb RAM, 30gb HDD)
 установка python
+
 sudo su
+
 apt-get update
 apt-get upgrade
 apt-get install python3.10
