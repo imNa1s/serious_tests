@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 def browser():
     print("\nstart browser for test..")
     chromeOptions = Options()
-    # chromeOptions.add_argument("--start-maximized")
+    chromeOptions.add_argument("--start-maximized")
     browser = webdriver.Chrome(options=chromeOptions)
     yield browser
     print("\nquit browser..")
