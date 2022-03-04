@@ -21,7 +21,6 @@ To run this project, install package to yours IDE or server
 В терминале по очерёдно введём команды
 
 1. sudo su.
-_______________
 2. apt-get update.
 _______________
 apt-get upgrade
