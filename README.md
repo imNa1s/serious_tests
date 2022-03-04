@@ -35,15 +35,14 @@ To run this project, install Python and package to yours IDE or server
 ###### Установка Git и копирование репозитория.
 Создайте папку под проекты и перейдите в неё.  
 Если у вас не установлен git используйте команду:  
-apt-get install git.  
-
-Затем выйдите из под root при помощи команды exit.
-Клонируйте репозиторий:
-git clone https://github.com/imNa1s/serious_tests.git
-Важно!
-После копирования репозитория перейдите в папку проекта и переименуйте conftest_win.py или conftets_headless.py в conftets.py.
-conftest_win.py - запускает тесты в полноэкранном режиме (для дебагинга).
-conftest_headless.py - запускает тесты без графического интерфейса (для работы на сервере).
+- apt-get install git.  
+Затем выйдите из под root при помощи команды exit.  
+Клонируйте репозиторий:  
+- git clone https://github.com/imNa1s/serious_tests.git  
+Важно!  
+После копирования репозитория перейдите в папку проекта и переименуйте conftest_win.py или conftets_headless.py в conftets.py  
+conftest_win.py - запускает тесты в полноэкранном режиме (для дебагинга).  
+conftest_headless.py - запускает тесты без графического интерфейса (для работы на сервере).  
 
 ###### Установка Chrome и chromedriver.
 Установите распаковщик архивов (если не установлен).
@@ -62,7 +61,7 @@ conftest_headless.py - запускает тесты без графическо
 - chmod a+x chromedriver
 
 
-Установите Google Chrome соответствующей версии.
-Для запуска тестов перейдите в home/{имя_пользователя}/serious_tests/tests.
-Для запуска тестов используйте команды вида pytest -v -m "admin" Test_login.py.
+Установите Google Chrome соответствующей версии.  
+Для запуска тестов перейдите в home/{имя_пользователя}/serious_tests/tests.  
+Для запуска тестов используйте команды вида pytest -v -m "admin" Test_login.py.  
 Где после -m указывается маркер соответсвующий нужному тесту список маркеров находится в pytest.ini
