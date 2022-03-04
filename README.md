@@ -35,7 +35,7 @@ To run this project, install Python and package to yours IDE or server
 ###### Установка Git и копирование репозитория.
 Создайте папку под проекты и перейдите в неё.  
 Если у вас не установлен git используйте команду:  
-- apt-get install git.  
+- apt-get install git. 
 Затем выйдите из под root при помощи команды exit.  
 Клонируйте репозиторий:  
 - git clone https://github.com/imNa1s/serious_tests.git  
