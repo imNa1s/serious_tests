@@ -5,7 +5,6 @@ from core.page_methods.ticket_ready_mt import TicketMt
 from core.page_methods.ready_pages_mt import BrowserMt
 
 
-@pytest.mark.test1
 @pytest.mark.ticket
 @pytest.mark.partner
 def test_ticket_alert_admin(browser):
@@ -15,7 +14,6 @@ def test_ticket_alert_admin(browser):
     TicketMt.create_tiket(browser, link)
 
 
-@pytest.mark.test1
 @pytest.mark.ticket
 @pytest.mark.admin
 def test_ticket_alert_partner(browser):
