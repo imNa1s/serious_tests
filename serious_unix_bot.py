@@ -119,7 +119,7 @@ def serioustestbot(token):
 
         elif message.text.strip() == 'Тест создания потока':
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
-            date = CallWinTests.bot_create_stream()
+            date = CallUnixTest.bot_create_stream()
             bot.send_message(message.chat.id, date)
 
         else:
