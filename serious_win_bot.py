@@ -22,7 +22,7 @@ def serioustestbot(token):
     @bot.message_handler(content_types=["text"])
     def handle_text(message):
         if message.text.strip() == 'Логин тест':
-            date = CallWinTests.bot_login()
+            date, answer = CallWinTests.bot_login()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест тикета от админа':
