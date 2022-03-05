@@ -6,6 +6,7 @@ class TestsPathsWin:
     source_win_tst = r'F:/serious/tests/Test_create_source.py'
     stream_win_tst = r'F:/serious/tests/Test_create_stream.py'
     operator_win_tst = r'F:/serious/tests/Test_operator.py'
+    stat_win_tst = r'F:/serious/tests/Test_main_statistic.py'
 
 
 class TestsPathsUnix:
@@ -16,3 +17,4 @@ class TestsPathsUnix:
     source_ux_tst = r'/home/na1s/serious_tests/tests/Test_create_source.py'
     stream_ux_tst = r'/home/na1s/serious_tests/tests/Test_create_stream.py'
     operator_ux_tst = r'/home/na1s/serious_tests/tests/Test_operator.py'
+    stat_ux_tst = r'/home/na1s/serious_tests/tests/Test_main_statistic.py'
