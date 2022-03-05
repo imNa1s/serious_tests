@@ -17,8 +17,8 @@ def serioustestbot(token):
         item4 = types.KeyboardButton("Тесты страны")
         item5 = types.KeyboardButton("Тесты источников")
         item6 = types.KeyboardButton("Тесты потоков")
-        markup.add(item1, item2, item3, item4)
-        markup.add(item5, item6)
+        markup.add(item1, item2, item3)
+        markup.add(item4, item5, item6)
         bot.send_message(m.chat.id, '\nВыбери категорию', reply_markup=markup)
 
     @bot.message_handler(content_types=["text"])
