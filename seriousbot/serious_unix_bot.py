@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-from seriousbot.call_tsts_bot import CallUnixTest
+import seriousbot.call_tsts_bot
 
 token = '5271986414:AAGyv59KpbcnBHu-SBHUWrh3tv1atUPqTjg'
 
@@ -22,15 +22,15 @@ def serioustestbot(token):
     @bot.message_handler(content_types=["text"])
     def handle_text(message):
         if message.text.strip() == 'Логин тест':
-            date = CallUnixTest.bot_login()
+            date = seriousbot.call_tsts_bot.CallUnixTest.bot_login()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест тикета от админа':
-            date = CallUnixTest.bot_admin_tiket()
+            date = seriousbot.call_tsts_bot.CallUnixTest.bot_admin_tiket()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест тикета от пользователя':
-            date = CallUnixTest.bot_partner_tiket()
+            date = seriousbot.call_tsts_bot.CallUnixTest.bot_partner_tiket()
             bot.send_message(message.chat.id, date)
 
         else:
