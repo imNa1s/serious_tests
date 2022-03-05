@@ -22,14 +22,17 @@ def serioustestbot(token):
     @bot.message_handler(content_types=["text"])
     def handle_text(message):
         if message.text.strip() == 'Логин тест':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date, answer = CallWinTests.bot_login()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест тикета от админа':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date = CallWinTests.bot_admin_tiket()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест тикета от пользователя':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date = CallWinTests.bot_partner_tiket()
             bot.send_message(message.chat.id, date)
 
