@@ -145,8 +145,13 @@ def serioustestbot(token):
             item3 = types.KeyboardButton("Тест статы переходов")
             item4 = types.KeyboardButton("Тест статы уников")
             item5 = types.KeyboardButton("Тест статы трафбека")
+            item6 = types.KeyboardButton("Тест статы сабок")
+            item7 = types.KeyboardButton("Тест статы конверсии")
+            item8 = types.KeyboardButton("Тест статы ансабок")
+            item9 = types.KeyboardButton("Тест статы ребилла")
             markup.add(item2, item3, item4)
-            markup.add(item5)
+            markup.add(item5, item6, item7)
+            markup.add(item8, item9)
             markup.add(item1)
             bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
@@ -168,6 +173,26 @@ def serioustestbot(token):
         elif message.text.strip() == 'Тест статы трафбека':
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date = CallWinTests.bot_stat_traffback()
+            bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Тест статы сабок':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_stat_subscribe()
+            bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Тест статы конверсии':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_stat_conversion()
+            bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Тест статы ансабок':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_stat_unsub()
+            bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Тест статы ребилла':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_stat_rebill()
             bot.send_message(message.chat.id, date)
 
         else:

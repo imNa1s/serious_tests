@@ -88,6 +88,30 @@ class CallWinTests:
         result = answer.communicate()
         return result
 
+    def bot_stat_subscribe():
+        arg = ["pytest", "-vm subscribe", TestsPathsWin.stat_win_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        result = answer.communicate()
+        return result
+
+    def bot_stat_conversion():
+        arg = ["pytest", "-vm conversion", TestsPathsWin.stat_win_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        result = answer.communicate()
+        return result
+
+    def bot_stat_unsub():
+        arg = ["pytest", "-vm unsub", TestsPathsWin.stat_win_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        result = answer.communicate()
+        return result
+
+    def bot_stat_rebill():
+        arg = ["pytest", "-vm rebill", TestsPathsWin.stat_win_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        result = answer.communicate()
+        return result
+
 class CallUnixTest:
     def bot_login():
         arg = ["pytest", "-vm admin", TestsPathsUnix.login_ux_tst]
@@ -169,6 +193,30 @@ class CallUnixTest:
 
     def bot_stat_traffback():
         arg = ["pytest", "-vm traffback", TestsPathsUnix.stat_ux_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        result = answer.communicate()
+        return result
+
+    def bot_stat_subscribe():
+        arg = ["pytest", "-vm subscribe", TestsPathsUnix.stat_ux_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        result = answer.communicate()
+        return result
+
+    def bot_stat_conversion():
+        arg = ["pytest", "-vm conversion", TestsPathsUnix.stat_ux_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        result = answer.communicate()
+        return result
+
+    def bot_stat_unsub():
+        arg = ["pytest", "-vm unsub", TestsPathsUnix.stat_ux_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        result = answer.communicate()
+        return result
+
+    def bot_stat_rebill():
+        arg = ["pytest", "-vm rebill", TestsPathsUnix.stat_ux_tst]
         answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
         result = answer.communicate()
         return result
