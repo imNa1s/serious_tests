@@ -5,6 +5,7 @@ class TestsPathsWin:
     country_win_tst = r'F:/serious/tests/Test_country.py'
     source_win_tst = r'F:/serious/tests/Test_create_source.py'
     stream_win_tst = r'F:/serious/tests/Test_create_stream.py'
+    operator_win_tst = r'F:/serious/tests/Test_operator.py'
 
 
 class TestsPathsUnix:
@@ -14,3 +15,4 @@ class TestsPathsUnix:
     country_ux_tst = r'/home/na1s/serious_tests/tests/Test_country.py'
     source_ux_tst = r'/home/na1s/serious_tests/tests/Test_create_source.py'
     stream_ux_tst = r'/home/na1s/serious_tests/tests/Test_create_stream.py'
+    operator_ux_tst = r'/home/na1s/serious_tests/tests/Test_operator.py'
