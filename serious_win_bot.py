@@ -16,11 +16,12 @@ def serioustestbot(token):
         item3 = types.KeyboardButton("Тесты категории")
         item4 = types.KeyboardButton("Тесты страны")
         item5 = types.KeyboardButton("Тесты источников")
-        markup.add(item1)
-        markup.add(item2)
+        item6 = types.KeyboardButton("Тесты потоков")
+        markup.add(item1, item2)
         markup.add(item3)
         markup.add(item4)
         markup.add(item5)
+        markup.add(item6)
         bot.send_message(m.chat.id, '\nВыбери категорию', reply_markup=markup)
 
     @bot.message_handler(content_types=["text"])
@@ -109,6 +110,19 @@ def serioustestbot(token):
         elif message.text.strip() == 'Тест создания источника':
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date = CallWinTests.bot_create_source()
+            bot.send_message(message.chat.id, date)
+        # Тесты потоков
+        elif message.text.strip() == 'Тесты потоков':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton("Тест создания потока")
+            item2 = types.KeyboardButton("/start")
+            markup.add(item1)
+            markup.add(item2)
+            bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
+
+        elif message.text.strip() == 'Тест создания потока':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_create_stream()
             bot.send_message(message.chat.id, date)
 
         else:
