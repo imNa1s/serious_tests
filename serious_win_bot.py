@@ -17,7 +17,7 @@ def serioustestbot(token):
         markup.add(item1)
         markup.add(item2)
         markup.add(item3)
-        bot.send_message(m.chat.id, '\nВыбери требуемый тест"', reply_markup=markup)
+        bot.send_message(m.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
     @bot.message_handler(content_types=["text"])
     def handle_text(message):
