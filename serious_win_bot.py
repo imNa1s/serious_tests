@@ -67,7 +67,7 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date = CallWinTests.bot_partner_tiket()
             bot.send_message(message.chat.id, date)
-        # Тесты тикетов
+        # Тесты категории
         elif message.text.strip() == 'Тесты категории':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             item1 = types.KeyboardButton("Тест создания категории")
