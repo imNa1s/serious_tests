@@ -10,12 +10,12 @@ def serioustestbot(token):
 
     @bot.message_handler(commands=["start"])
     def start(m, res=False):
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        item1 = types.KeyboardButton("Логин тесты")
-        item2 = types.KeyboardButton("Тесты тикетов")
-        item3 = types.KeyboardButton("Тесты категории")
-        item4 = types.KeyboardButton("Тесты страны")
-        item5 = types.KeyboardButton("Тесты источников")
+        markup = types.InlineKeyboardMarkup()
+        item1 = types.InlineKeyboardButton("Логин тесты")
+        item2 = types.InlineKeyboardButton("Тесты тикетов")
+        item3 = types.InlineKeyboardButton("Тесты категории")
+        item4 = types.InlineKeyboardButton("Тесты страны")
+        item5 = types.InlineKeyboardButton("Тесты источников")
         markup.add(item1)
         markup.add(item2)
         markup.add(item3)
