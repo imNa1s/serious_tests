@@ -11,11 +11,11 @@ def serioustestbot(token):
     @bot.message_handler(commands=["start"])
     def start(m, res=False):
         markup = types.InlineKeyboardMarkup()
-        item1 = types.InlineKeyboardButton("Логин тесты")
-        item2 = types.InlineKeyboardButton("Тесты тикетов")
-        item3 = types.InlineKeyboardButton("Тесты категории")
-        item4 = types.InlineKeyboardButton("Тесты страны")
-        item5 = types.InlineKeyboardButton("Тесты источников")
+        item1 = types.InlineKeyboardButton(text="Логин тесты", callback_data="Логин тесты")
+        item2 = types.InlineKeyboardButton(text="Тесты тикетов", callback_data="Тесты тикетов")
+        item3 = types.InlineKeyboardButton(text="Тесты категории", callback_data="Тесты тикетов")
+        item4 = types.InlineKeyboardButton(text="Тесты страны", callback_data="Тесты тикетов")
+        item5 = types.InlineKeyboardButton(text="Тесты источников", callback_data="Тесты тикетов")
         markup.add(item1)
         markup.add(item2)
         markup.add(item3)
@@ -23,14 +23,14 @@ def serioustestbot(token):
         markup.add(item5)
         bot.send_message(m.chat.id, '\nВыбери категорию', reply_markup=markup)
 
-    @bot.message_handler(content_types=["text"])
+    @bot.callback_query_handler(content_types=["text"])
     def handle_text(message):
         if message.text.strip() == 'Логин тесты':
-            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            item1 = types.KeyboardButton("Логин в админку")
-            item2 = types.KeyboardButton("Неудачный логимн в админку")
-            item3 = types.KeyboardButton("Логин партнёра test через админку")
-            item4 = types.KeyboardButton("/start")
+            markup = types.InlineKeyboardMarkup()
+            item1 = types.InlineKeyboardButton(text="Логин в админку", callback_data="Логин в админку")
+            item2 = types.InlineKeyboardButton(text="Неудачный логин в админку", callback_data="нлва")
+            item3 = types.InlineKeyboardButton("Логин партнёра test через админку")
+            item4 = types.InlineKeyboardButton("/start")
             markup.add(item1)
             markup.add(item2)
             markup.add(item3)
@@ -42,7 +42,7 @@ def serioustestbot(token):
             date, answer = CallUnixTest.bot_login()
             bot.send_message(message.chat.id, date)
 
-        elif message.text.strip() == 'Неудачный логимн в админку':
+        elif message.text.strip() == 'нлва':
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date, answer = CallUnixTest.bot_fail_login()
             bot.send_message(message.chat.id, date)
