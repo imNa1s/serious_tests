@@ -161,37 +161,37 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест статы переходов':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃 \nя займу примерно 1 минуту времени.")
             date = CallUnixTest.bot_stat_transition()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест статы уников':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу примерно 1 минуту времени.")
             date = CallUnixTest.bot_stat_unic()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест статы трафбека':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу примерно 1 минуту времени.")
             date = CallUnixTest.bot_stat_traffback()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест статы сабок':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу примерно 1 минуту времени.")
             date = CallUnixTest.bot_stat_subscribe()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест статы конверсии':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу примерно 1 минуту времени.")
             date = CallUnixTest.bot_stat_conversion()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест статы ансабок':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу примерно 1 минуту времени.")
             date = CallUnixTest.bot_stat_unsub()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест статы ребилла':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу примерно 1 минуту времени.")
             date = CallUnixTest.bot_stat_rebill()
             bot.send_message(message.chat.id, date)
 
