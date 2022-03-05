@@ -1,6 +1,6 @@
 import subprocess
 
-from bots.support_for_bot import ConsolePaths, TestsPathsWin, TestsPathsUnix
+from seriousbot.support_for_bot import ConsolePaths, TestsPathsWin, TestsPathsUnix
 
 
 class CallWinTests:

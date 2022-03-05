@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-from bots.call_tsts_bot import CallUnixTest
+from seriousbot.call_tsts_bot import CallUnixTest
 
 token = '5271986414:AAGyv59KpbcnBHu-SBHUWrh3tv1atUPqTjg'
 
