@@ -140,15 +140,34 @@ def serioustestbot(token):
         # Тесты статистики
         elif message.text.strip() == 'Тесты статистики':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            item1 = types.KeyboardButton("Тест изменения даты")
-            item2 = types.KeyboardButton("/start")
+            item1 = types.KeyboardButton("/start")
+            item2 = types.KeyboardButton("Тест изменения даты")
+            item3 = types.KeyboardButton("Тест статы переходов")
+            item4 = types.KeyboardButton("Тест статы уников")
+            item5 = types.KeyboardButton("Тест статы трафбека")
+            markup.add(item2, item3, item4)
+            markup.add(item5)
             markup.add(item1)
-            markup.add(item2)
             bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
         elif message.text.strip() == 'Тест изменения даты':
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date = CallWinTests.bot_stat_date()
+            bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Тест статы переходов':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_stat_transition()
+            bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Тест статы уников':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_stat_unic()
+            bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Тест статы трафбека':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_stat_traffback()
             bot.send_message(message.chat.id, date)
 
         else:
