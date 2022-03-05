@@ -1,3 +1,5 @@
+import time
+
 from core.page_methods.partner_page import PartnerNavBorder, GoToPartnerPage, AdmPartnerPage
 from core.page_methods.ticket_page import PartnerTicketsMt, AdmTicketsPage
 
@@ -37,6 +39,7 @@ class TicketMt:
         Page.switch_to_new_win()
         Page.ref()
         alert_icon_after = Page.see_partner_alert()
+        time.sleep(2)
         assert alert_icon_before != alert_icon_after, 'no new alerts'
         Page.partner_alert_button()
         header = Page.partner_alert_header_text()
