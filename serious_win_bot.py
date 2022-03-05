@@ -11,20 +11,50 @@ def serioustestbot(token):
     @bot.message_handler(commands=["start"])
     def start(m, res=False):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        item1 = types.KeyboardButton("Логин тест")
-        item2 = types.KeyboardButton("Тест тикета от админа")
-        item3 = types.KeyboardButton("Тест тикета от пользователя")
+        item1 = types.KeyboardButton("Логин тесты")
+        item2 = types.KeyboardButton("Тесты тикетов")
         markup.add(item1)
         markup.add(item2)
-        markup.add(item3)
-        bot.send_message(m.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
+        bot.send_message(m.chat.id, '\nВыбери категорию', reply_markup=markup)
 
     @bot.message_handler(content_types=["text"])
     def handle_text(message):
-        if message.text.strip() == 'Логин тест':
+        if message.text.strip() == 'Логин тесты':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton("Логин в админку")
+            item2 = types.KeyboardButton("Неудачный логимн в админку")
+            item3 = types.KeyboardButton("Логин партнёра test через админку")
+            item4 = types.KeyboardButton("/start")
+            markup.add(item1)
+            markup.add(item2)
+            markup.add(item3)
+            markup.add(item4)
+            bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
+        # Тесты логина
+        elif message.text.strip() == 'Логин в админку':
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date, answer = CallWinTests.bot_login()
             bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Неудачный логимн в админку':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date, answer = CallWinTests.bot_fail_login()
+            bot.send_message(message.chat.id, date)
+
+        elif message.text.strip() == 'Логин партнёра test через админку':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date, answer = CallWinTests.bot_partner_login()
+            bot.send_message(message.chat.id, date)
+        # Тесты тикетов
+        elif message.text.strip() == 'Тесты тикетов':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton("Тест тикета от админа")
+            item2 = types.KeyboardButton("Тест тикета от пользователя")
+            item3 = types.KeyboardButton("/start")
+            markup.add(item1)
+            markup.add(item2)
+            markup.add(item3)
+            bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
         elif message.text.strip() == 'Тест тикета от админа':
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
