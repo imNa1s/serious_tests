@@ -17,7 +17,7 @@ class CallWinTests:
         return date
 
     def bot_partner_tiket():
-        arg = ["pytest", "-v -m partner", TestsPathsWin.tickets_win_tst]
+        arg = ["pytest", "-vm partner", TestsPathsWin.tickets_win_tst]
         answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
         date = answer.communicate()
         return date
@@ -25,19 +25,19 @@ class CallWinTests:
 
 class CallUnixTest:
     def bot_login():
-        arg = ["pytest", "-v -m admin", TestsPathsUnix.login_ux_tst]
+        arg = ["pytest", "-vm admin", TestsPathsUnix.login_ux_tst]
         answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
         date = answer.communicate()
         return date
 
     def bot_admin_tiket():
-        arg = ["pytest", "-v -m admin", TestsPathsUnix.tickets_ux_tst]
+        arg = ["pytest", "-vm admin", TestsPathsUnix.tickets_ux_tst]
         answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
         date = answer.communicate()
         return date
 
     def bot_partner_tiket():
-        arg = ["pytest", "v -m partner", TestsPathsUnix.tickets_ux_tst]
+        arg = ["pytest", "-vm partner", TestsPathsUnix.tickets_ux_tst]
         answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
         date = answer.communicate()
         return date
