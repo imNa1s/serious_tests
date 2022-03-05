@@ -13,8 +13,12 @@ def serioustestbot(token):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         item1 = types.KeyboardButton("Логин тесты")
         item2 = types.KeyboardButton("Тесты тикетов")
+        item3 = types.KeyboardButton("Тесты категории")
+        item4 = types.KeyboardButton("Тесты страны")
         markup.add(item1)
         markup.add(item2)
+        markup.add(item3)
+        markup.add(item4)
         bot.send_message(m.chat.id, '\nВыбери категорию', reply_markup=markup)
 
     @bot.message_handler(content_types=["text"])
