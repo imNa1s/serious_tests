@@ -65,6 +65,19 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date = CallUnixTest.bot_partner_tiket()
             bot.send_message(message.chat.id, date)
+        # Тесты тикетов
+        elif message.text.strip() == 'Тесты категории':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton("Тест создания категории")
+            item2 = types.KeyboardButton("/start")
+            markup.add(item1)
+            markup.add(item2)
+            bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
+
+        elif message.text.strip() == 'Тест создания категории':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallUnixTest.bot_category()
+            bot.send_message(message.chat.id, date)
 
         else:
             bot.send_sticker(message.chat.id,
