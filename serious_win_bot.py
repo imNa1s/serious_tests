@@ -80,6 +80,19 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
             date = CallWinTests.bot_category()
             bot.send_message(message.chat.id, date)
+        # Тесты страны
+        elif message.text.strip() == 'Тесты страны':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton("Тест создания страны")
+            item2 = types.KeyboardButton("/start")
+            markup.add(item1)
+            markup.add(item2)
+            bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
+
+        elif message.text.strip() == 'Тест создания страны':
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            date = CallWinTests.bot_country()
+            bot.send_message(message.chat.id, date)
 
         else:
             bot.send_sticker(message.chat.id,

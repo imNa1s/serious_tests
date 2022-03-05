@@ -40,6 +40,11 @@ class CallWinTests:
         date = answer.communicate()
         return date
 
+    def bot_country():
+        arg = ["pytest", "-vm create", TestsPathsWin.country_win_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        date = answer.communicate()
+        return date
 
 class CallUnixTest:
     def bot_login():
@@ -74,6 +79,12 @@ class CallUnixTest:
 
     def bot_category():
         arg = ["pytest", "-vm create", TestsPathsUnix.category_ux_tst]
+        answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
+        date = answer.communicate()
+        return date
+
+    def bot_country():
+        arg = ["pytest", "-vm create", TestsPathsUnix.country_ux_tst]
         answer = subprocess.Popen(arg, stdout=subprocess.PIPE)
         date = answer.communicate()
         return date
