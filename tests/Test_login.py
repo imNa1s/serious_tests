@@ -3,7 +3,7 @@ import pytest
 
 from core.links import SiteLinks
 from core.page_methods.login_page import LoginPage
-from core.page_methods.partner_page import GoToPartnerPage
+from core.page_methods.partner_page import GoToPartnerPage, AdmSideNavBorder
 from core.page_methods.ready_pages_mt import BrowserMt
 
 
@@ -42,8 +42,9 @@ def test_login_fail(browser):
 def test_login_as_partner(browser):
     link = SiteLinks.login_link_test1
     BrowserMt.login_pass(browser, link)
+    Page = AdmSideNavBorder(browser, link)
+    Page.partner_page_open()
     Page = GoToPartnerPage(browser, link)
-    Page.partner_button()
     Page.testmail_parnter()
     check_link = browser.current_url
     Page.testmail_autorization()
