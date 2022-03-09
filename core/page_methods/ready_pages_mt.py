@@ -2,7 +2,7 @@ import time
 
 from core.links import SiteLinks
 from core.page_methods.login_page import LoginPage
-from core.page_methods.partner_page import GoToPartnerPage, AdmPartnerPage
+from core.page_methods.partner_page import GoToPartnerPage, AdmSideNavBorder
 
 
 class BrowserMt:
@@ -18,7 +18,7 @@ class BrowserMt:
         assert link_check != to_check, "you didn't login"
 
     def partner_redirect(self, link):
-        Page = AdmPartnerPage(self, link)
+        Page = AdmSideNavBorder(self, link)
         Page.partner_page_open()
         Page = GoToPartnerPage(self, link)
         Page.testmail_parnter()

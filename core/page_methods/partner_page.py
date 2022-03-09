@@ -3,7 +3,7 @@ from core.locators import PartnerLocators, StreamLocators, AdmSideBarLocators
 from core.statistic.main_statistic_base import StatsMt
 
 
-class AdmPartnerPage(BaseMt):
+class AdmSideNavBorder(BaseMt):
     def partner_page_open(self):
         assert self.is_element_present(*AdmSideBarLocators.partner_menu), 'can\'t find button partner'
         self.find_el_click(*AdmSideBarLocators.partner_menu)

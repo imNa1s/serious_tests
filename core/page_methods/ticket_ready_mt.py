@@ -1,6 +1,6 @@
 import time
 
-from core.page_methods.partner_page import PartnerNavBorder, GoToPartnerPage, AdmPartnerPage
+from core.page_methods.partner_page import PartnerNavBorder, GoToPartnerPage, AdmSideNavBorder
 from core.page_methods.ticket_page import PartnerTicketsMt, AdmTicketsPage
 
 
@@ -23,7 +23,7 @@ class TicketMt:
         assert alert_icon_bef != alert_icon_af, 'no new alerts'
 
     def create_adm_ticket(self, link):
-        Page = AdmPartnerPage(self, link)
+        Page = AdmSideNavBorder(self, link)
         Page.partner_page_open()
         Page = GoToPartnerPage(self, link)
         Page.testmail_parnter()
