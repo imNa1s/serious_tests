@@ -39,17 +39,17 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
         # Тесты логина
         elif message.text.strip() == 'Логин в админку':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу около 10 секунд")
             date, answer = CallUnixTest.bot_login()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Неудачный логимн в админку':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу около 10 секунд")
             date, answer = CallUnixTest.bot_fail_login()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Логин партнёра test через админку':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу около 10 секунд")
             date, answer = CallUnixTest.bot_partner_login()
             bot.send_message(message.chat.id, date)
         # Тесты тикетов
