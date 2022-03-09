@@ -64,12 +64,12 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
         elif message.text.strip() == 'Тест тикета от админа':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃 \nя займу около 30 секунд")
             date = CallUnixTest.bot_admin_tiket()
             bot.send_message(message.chat.id, date)
 
         elif message.text.strip() == 'Тест тикета от пользователя':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу около 30 секунд")
             date = CallUnixTest.bot_partner_tiket()
             bot.send_message(message.chat.id, date)
         # Тесты категории
@@ -82,7 +82,7 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
         elif message.text.strip() == 'Тест создания категории':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу около 10 секунд")
             date = CallUnixTest.bot_category()
             bot.send_message(message.chat.id, date)
         # Тесты страны
@@ -95,7 +95,7 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
         elif message.text.strip() == 'Тест создания страны':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу около 10 секунд")
             date = CallUnixTest.bot_country()
             bot.send_message(message.chat.id, date)
         # Тесты источника
@@ -108,7 +108,7 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
         elif message.text.strip() == 'Тест создания источника':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу около 15 секунд")
             date = CallUnixTest.bot_create_source()
             bot.send_message(message.chat.id, date)
         # Тесты потоков
@@ -134,7 +134,7 @@ def serioustestbot(token):
             bot.send_message(message.chat.id, '\nВыбери требуемый тест', reply_markup=markup)
 
         elif message.text.strip() == 'Тест создания оператора':
-            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃")
+            bot.send_message(message.chat.id, "Нашёл, запускаю! 🏃\nя займу около 10 секунд")
             date = CallUnixTest.bot_create_operator()
             bot.send_message(message.chat.id, date)
         # Тесты статистики
