@@ -1,15 +1,15 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 
 @pytest.fixture(scope="function")
 def browser():
-    chrome_options = webdriver.ChromeOptions()
+    chromeOptions = Options()
+    chromeOptions.set_capability({'browserName': 'chrome', 'version': '99.0'})
     browser = webdriver.Remote(
         command_executor='http://localhost:4444/wd/hub',
-        desired_capabilities={'browserName': 'chrome',
-                              'version': '99.0'},
-        options=chrome_options)
+        options=chromeOptions)
 
     browser.maximize_window()
 
