@@ -31,6 +31,8 @@ To run this project, install Python and package to yours IDE or server
 9. pip install requests
 10. pip install pytest
 11. pip install beautifulsoup4
+12. pip install telebot
+13. pip install pyTelegramBotApi
 
 ###### Установка Git и копирование репозитория.
 Создайте папку под проекты и перейдите в неё.  
@@ -46,7 +48,7 @@ conftest_headless.py - запускает тесты без графическо
 
 ###### Установка Chrome и chromedriver.
 Установите распаковщик архивов (если не установлен).
-- apt unzip.
+- apt install unzip.
 Скачайте и установите chromedriver при помощи команд:
 - wget https://chromedriver.storage.googleapis.com/{актуальная версия браузера}/chromedriver_linux64.zip
 - unzip chromedriver_linux64.zip
@@ -65,3 +67,10 @@ conftest_headless.py - запускает тесты без графическо
 Для запуска тестов перейдите в home/{имя_пользователя}/serious_tests/tests.  
 Для запуска тестов используйте команды вида pytest -v -m "admin" Test_login.py.  
 Где после -m указывается маркер соответсвующий нужному тесту список маркеров находится в pytest.ini
+
+
+#### Setup Bot
+
+
+#### Setup Selenoid
+
