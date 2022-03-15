@@ -2,4 +2,4 @@
 /.idea/
 /.pytest_cache/
 conftest.py
-bot_token.py
+seriousbot/bot_token.py
