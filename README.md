@@ -10,7 +10,6 @@
 6. telebot 0.0.4
 
 #### Setup
-To run this project, install Python and package to yours IDE or server
 
 ##### IDE (PyCharm for example)
 
