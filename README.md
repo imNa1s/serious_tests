@@ -18,7 +18,7 @@ To run this project, install Python and package to yours IDE or server
 
 ##### Server (Ubuntu 64bit, quad core, 4gb RAM, 30gb HDD)
 
-###### Установка Python3
+##### Установка Python3
 
 В терминале по очерёдно введём команды:
 1. sudo su.
@@ -35,7 +35,7 @@ To run this project, install Python and package to yours IDE or server
 12. pip install telebot
 13. pip install pyTelegramBotApi
 
-###### Установка Git и копирование репозитория.
+##### Установка Git и копирование репозитория.
 Создайте папку под проекты и перейдите в неё.  
 Если у вас не установлен git используйте команду:  
 - apt-get install git. 
@@ -44,11 +44,11 @@ To run this project, install Python and package to yours IDE or server
 - git clone https://github.com/imNa1s/serious_tests.git  
 Важно!  
 После копирования репозитория перейдите в папку проекта и переименуйте conftest_win.py, conftets_headless.py, или conftets_selenoid.py в conftets.py  
-conftest_win.py - запускает тесты в полноэкранном режиме (для дебагинга).  
-conftest_headless.py - запускает тесты без графического интерфейса (для работы на сервере).  
+conftest_win.py - запускает тесты в полноэкранном режиме (для работы в Windows системах).  
+conftest_headless.py - запускает тесты без графического интерфейса (для работы в системе Ubuntu).  
 conftets_selenoid.py - запускает тесты в специальном контейнере (требуется установить дополнительное ПО)
 
-###### Установка Chrome и chromedriver.
+##### Установка Chrome и chromedriver.
 Установите распаковщик архивов (если не установлен).
 - apt install unzip.
 Скачайте и установите chromedriver при помощи команд:
