@@ -7,6 +7,7 @@
 3. pytest: 6.2.5
 4. requests: 2.26.0
 5. beautifulsoup4: 4.10.0
+6. telebot 0.0.4
 
 #### Setup
 To run this project, install Python and package to yours IDE or server
@@ -42,9 +43,10 @@ To run this project, install Python and package to yours IDE or server
 Клонируйте репозиторий:  
 - git clone https://github.com/imNa1s/serious_tests.git  
 Важно!  
-После копирования репозитория перейдите в папку проекта и переименуйте conftest_win.py или conftets_headless.py в conftets.py  
+После копирования репозитория перейдите в папку проекта и переименуйте conftest_win.py, conftets_headless.py, или conftets_selenoid.py в conftets.py  
 conftest_win.py - запускает тесты в полноэкранном режиме (для дебагинга).  
 conftest_headless.py - запускает тесты без графического интерфейса (для работы на сервере).  
+conftets_selenoid.py - запускает тесты в специальном контейнере (требуется установить дополнительное ПО)
 
 ###### Установка Chrome и chromedriver.
 Установите распаковщик архивов (если не установлен).
@@ -74,3 +76,46 @@ conftest_headless.py - запускает тесты без графическо
 
 #### Setup Selenoid
 
+##### Setup Docker for Selenoid
+
+Если вы решили установить Selenoid уже после того как некоторое время пользовались тест сьютом обновите базу пакетов:  
+- sudo apt update  
+
+Для корректной работы требуется установить дополнительные пакеты:  
+- sudo apt install apt-transport-https ca-certificates curl software-properties-common  
+
+Добавляем ключ GPG официального репозитория Docker:  
+- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add  
+
+Подключаем репозиторий Docker:  
+- sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"  
+
+После добавления нового репозитория обязательно обновим базу пакетов, иначе при выполнении команды установки система не будет знать что этот пакет доступен:  
+- sudo apt update  
+
+Установим Docker:  
+- sudo apt install docker-ce  
+
+Для проверки активен ли докер используйте команду:  
+- sudo systemctl status docker  
+
+##### Setup Selenoid for Linux
+
+Скачайте бинарник для быстрой установки Selenoid'а с официальной страницы релизов:  
+- https://github.com/aerokube/cm/releases/tag/1.8.1  
+
+Переименуйте его в "cm" для более удобного использования  
+
+Выдайте права на выполнение:  
+- chmod +x cm  
+
+Запустите установку при помощи команды:  
+- ./cm selenoid start --vnс  
+
+Опционально можете установить Selenoid-UI командой:  
+- ./cm selenoid-ui start  
+
+##### Setup Selenoid for Windows
+
+Скачайте установочник с официальной страницы релизов и запустите его.  
+- https://github.com/aerokube/cm/releases/tag/1.8.1   
