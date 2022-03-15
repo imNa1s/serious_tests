@@ -20,7 +20,7 @@ To run this project, install Python and package to yours IDE or server
 
 ##### Установка Python3
 
-В терминале по очерёдно введём команды:
+В терминале поочерёдно введём команды:
 1. sudo su.
 2. apt-get update.
 3. apt-get upgrade
