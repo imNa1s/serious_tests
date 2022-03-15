@@ -1,8 +1,9 @@
 import telebot
 from telebot import types
 from seriousbot.call_tsts_bot import CallWinTests
+from seriousbot.bot_token import BotToken
 
-token = '5234613832:AAHRtLcEMhmND0MZufYu07sbL0VD1Kvh7cQ'
+token = BotToken.token_serious
 
 
 def serioustestbot(token):
